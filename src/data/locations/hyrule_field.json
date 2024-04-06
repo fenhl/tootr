@@ -1768,6 +1768,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "HF Near Market Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Near Market Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "HF Near Market Grotto Gossip Stone Drop": {
       "area": "",
       "lKey": "Hyrule Field -> HF Near Market Grotto",
@@ -2066,6 +2087,27 @@
         }
       ]
     },
+    "HF Cow Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Cow Grotto",
+      "alias": "Spider Web",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "HF Cow Grotto Gossip Stone Drop": {
       "area": "",
       "lKey": "Hyrule Field -> HF Cow Grotto",
@@ -2228,6 +2270,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "HF Southeast Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Southeast Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "HF Southeast Grotto Gossip Stone Drop": {
       "area": "",
       "lKey": "Hyrule Field -> HF Southeast Grotto",
@@ -2378,6 +2441,27 @@
         {
           "setting": "Shuffle Beehives",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HF Open Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Hyrule Field -> HF Open Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

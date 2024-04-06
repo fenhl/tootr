@@ -1481,6 +1481,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "KF Gossip Stone": {
+      "area": "Kokiri Forest",
+      "lKey": "",
+      "alias": "Near Storms Grotto",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "KF Gossip Stone Drop": {
       "area": "Kokiri Forest",
       "lKey": "",
@@ -2172,6 +2193,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "KF Deku Tree Gossip Stone (Left)": {
+      "area": "Kokiri Forest",
+      "lKey": "",
+      "alias": "Deku Tree Left",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "KF Deku Tree Gossip Stone (Left) Drop": {
       "area": "Kokiri Forest",
       "lKey": "",
@@ -2181,6 +2223,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "KF Deku Tree Gossip Stone (Right)": {
+      "area": "Kokiri Forest",
+      "lKey": "",
+      "alias": "Deku Tree Right",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],
@@ -2873,6 +2936,27 @@
         {
           "setting": "Shuffle Beehives",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "KF Storms Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Kokiri Forest -> KF Storms Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

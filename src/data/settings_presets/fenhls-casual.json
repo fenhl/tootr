@@ -1,0 +1,63 @@
+{
+    "Settings": {
+        "Kokiri Forest": "Closed Forest",
+        "Door of Time": "Closed",
+        "Rainbow Bridge": "Dungeons",
+        "Ganon's Boss Key": "Tokens",
+        "Shuffle Freestanding Items": "All",
+        "Shuffle Pots": "All",
+        "Shuffle Empty Pots": "On",
+        "Shuffle Crates": "All",
+        "Shuffle Empty Crates": "On",
+        "Shuffle Beehives": "On",
+        "Shuffle Hyrule Loach": "On",
+        "Shuffle Songs": "On",
+        "Shuffle Dungeon Rewards": "On",
+        "Shuffle Maps & Compasses": "On",
+        "Shuffle Silver Rupees": "Anywhere",
+        "Shuffle Small Keys": "Anywhere",
+        "Shuffle Fortress Keys": "Anywhere",
+        "Shuffle Boss Keys": "Anywhere",
+        "Shuffle Child Trade": [
+            "Weird Egg",
+            "Zelda's Letter",
+            "Keaton Mask",
+            "Skull Mask",
+            "Spooky Mask",
+            "Bunny Hood",
+            "Goron Mask",
+            "Zora Mask",
+            "Gerudo Mask",
+            "Mask of Truth"
+        ],
+        "Shuffle Adult Trade": [
+            "Pocket Egg",
+            "Cojiro",
+            "Odd Mushroom",
+            "Odd Potion",
+            "Poacher's Saw",
+            "Broken Sword",
+            "Prescription",
+            "Eyeball Frog",
+            "Eyedrops",
+            "Claim Check"
+        ],
+        "Shuffle Wonderitems": "On",
+        "Shuffle Interiors": [
+            "Simple",
+            "Special",
+            "Hideout"
+        ],
+        "Shuffle Dungeons": "Dungeons and Ganon",
+        "Mixed Pools": [
+            "Interiors",
+            "Grottos",
+            "Dungeons",
+            "Overworld",
+            "Boss Rooms"
+        ],
+        "Bombchus in Logic": "On",
+        "Damage Multiplier": "Half",
+        "Hint Distribution": "Chaos"
+    }
+}

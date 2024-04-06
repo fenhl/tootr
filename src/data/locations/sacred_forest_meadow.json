@@ -516,6 +516,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "SFM Maze Gossip Stone (Lower)": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Lower",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "SFM Maze Gossip Stone (Lower) Drop": {
       "area": "Sacred Forest Meadow",
       "lKey": "",
@@ -537,6 +558,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "SFM Maze Gossip Stone (Upper)": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Maze Upper",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "SFM Maze Gossip Stone (Upper) Drop": {
       "area": "Sacred Forest Meadow",
       "lKey": "",
@@ -546,6 +588,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "SFM Saria Gossip Stone": {
+      "area": "Sacred Forest Meadow",
+      "lKey": "",
+      "alias": "Saria",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

@@ -182,6 +182,27 @@
         }
       ]
     },
+    "DMC Gossip Stone": {
+      "area": "Death Mountain Crater",
+      "lKey": "",
+      "alias": "Bombable Wall",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "DMC Gossip Stone Drop": {
       "area": "Death Mountain Crater",
       "lKey": "",
@@ -1054,6 +1075,27 @@
         {
           "setting": "Shuffle Beehives",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMC Upper Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "DMC Upper Nearby -> DMC Upper Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

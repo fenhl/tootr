@@ -473,6 +473,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "GV Gossip Stone": {
+      "area": "Gerudo Valley",
+      "lKey": "",
+      "alias": "Near Cow",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "GV Gossip Stone Drop": {
       "area": "Gerudo Valley",
       "lKey": "",

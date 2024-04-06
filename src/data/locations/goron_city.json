@@ -547,6 +547,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "GC Medigoron Gossip Stone": {
+      "area": "Goron City",
+      "lKey": "",
+      "alias": "Near Medigoron",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "GC Medigoron Gossip Stone Drop": {
       "area": "Goron City",
       "lKey": "",
@@ -680,6 +701,27 @@
           "required": false
         }
       ]
+    },
+    "GC Maze Gossip Stone": {
+      "area": "Goron City",
+      "lKey": "",
+      "alias": "Boulder Maze",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
     },
     "GC Maze Gossip Stone Drop": {
       "area": "Goron City",

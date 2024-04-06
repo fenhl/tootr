@@ -2,7 +2,7 @@
   "name": "tootr",
   "version": "0.4.0",
   "private": true,
-  "homepage": "https://mracsys.github.io/tootr",
+  "homepage": "https://fenhl.github.io/tootr",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",

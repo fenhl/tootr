@@ -87,6 +87,7 @@ import ddrS1 from './data/settings_presets/ddr-s1.json';
 import leagueS2 from './data/settings_presets/league-s2.json';
 import maxChex from './data/settings_presets/1175.json';
 import mw3 from './data/settings_presets/mw3.json';
+import fenhlsCasual from './data/settings_presets/fenhls-casual.json';
 import OotIcon from './OotIcon';
 
 const drawerWidth = 240;
@@ -1011,6 +1012,9 @@ class Tracker extends React.Component {
             case "MW Season 3":
                 presetSettings = cloneDeep(mw3.Settings);
                 break;
+            case "Fenhl's Casual":
+                presetSettings = cloneDeep(fenhlsCasual.Settings);
+                break;
             case "Custom":
                 presetSettings = cloneDeep(customSettings);
                 break;
@@ -1036,6 +1040,7 @@ class Tracker extends React.Component {
         settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
         settings["Show Locations"] = prevSettings["Show Locations"];
         settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+        settings["Show Hint Locations"] = prevSettings["Show Hint Locations"];
         settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
 		settings["Show Helpful Extra Checks"] = prevSettings["Show Helpful Extra Checks"];
         
@@ -1609,6 +1614,7 @@ class Tracker extends React.Component {
             settings["Show Unshuffled Entrances"] = prevSettings["Show Unshuffled Entrances"];
             settings["Show Locations"] = prevSettings["Show Locations"];
             settings["Show Unshuffled Skulls"] = prevSettings["Show Unshuffled Skulls"];
+            settings["Show Hint Locations"] = prevSettings["Show Hint Locations"];
             settings["Shop Price Tracking"] = prevSettings["Shop Price Tracking"];
             settings["Show Helpful Extra Checks"] = prevSettings["Show Helpful Extra Checks"];
             settings["View"] = prevSettings["View"];
@@ -2480,7 +2486,7 @@ class Tracker extends React.Component {
                                     })
                                 }
                                 <ListItem>
-                                    <Link className={classes.devLink} href="https://github.com/mracsys/tootr"><Typography>Github</Typography></Link>
+                                    <Link className={classes.devLink} href="https://github.com/fenhl/tootr"><Typography>Github</Typography></Link>
                                 </ListItem>
                             </List>
                         </Drawer>

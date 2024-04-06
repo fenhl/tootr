@@ -282,6 +282,27 @@
         }
       ]
     },
+    "ZF Fairy Gossip Stone": {
+      "area": "Zora Fountain",
+      "lKey": "",
+      "alias": "Near Fairy",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "ZF Fairy Gossip Stone Drop": {
       "area": "Zora Fountain",
       "lKey": "",
@@ -291,6 +312,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZF Jabu Gossip Stone": {
+      "area": "Zora Fountain",
+      "lKey": "",
+      "alias": "Near Jabu",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

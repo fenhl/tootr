@@ -10,6 +10,7 @@
                 "League",
                 "Max Chex",
                 "MW Season 3",
+                "Fenhl's Casual",
                 "Custom"
             ],
             "Show Unshuffled Entrances": [
@@ -22,6 +23,10 @@
                 "No"
             ],
             "Show Unshuffled Skulls": [
+                "Yes",
+                "No"
+            ],
+            "Show Hint Locations": [
                 "Yes",
                 "No"
             ],
@@ -371,6 +376,7 @@
             "Hint Distribution": [
                 "Balanced",
                 "Bingo",
+                "Chaos",
                 "DDR",
                 "Scrubs",
                 "Strong",

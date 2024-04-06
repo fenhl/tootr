@@ -134,6 +134,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "Dodongos Cavern Gossip Stone": {
+      "area": "",
+      "lKey": "Death Mountain -> Dodongos Cavern Beginning",
+      "alias": "Back Right Alcove",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Dodongos Cavern Gossip Stone Drop": {
       "area": "",
       "lKey": "Death Mountain -> Dodongos Cavern Beginning",

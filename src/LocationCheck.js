@@ -12,6 +12,7 @@ import crateIcon from './images/OoT_Crate_Icon.png';
 import grassIcon from './images/OoT_Grass_Icon.png';
 import jarIcon from './images/OoT_Jar_Icon.png';
 import soulIcon from './images/OoT_Soul_Icon.png';
+import gossipStoneIcon from './images/Gossip_Stone_Icon.png';
 
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import DoneIcon from '@material-ui/icons/Done';
@@ -28,7 +29,8 @@ class LocationCheck extends React.Component {
 			"crate": crateIcon,
 			"grass": grassIcon,
 			"jar": jarIcon,
-			"enemyDrop": soulIcon
+			"enemyDrop": soulIcon,
+            "gossipStone": gossipStoneIcon,
         };
         let walletTiers = [
             "Green Rupee",

@@ -792,6 +792,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "DMT Gossip Stone": {
+      "area": "Death Mountain Trail",
+      "lKey": "",
+      "alias": "Climb",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "DMT Gossip Stone Drop": {
       "area": "Death Mountain Trail",
       "lKey": "",
@@ -942,6 +963,27 @@
         {
           "setting": "Shuffle Beehives",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "DMT Storms Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Death Mountain -> DMT Storms Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

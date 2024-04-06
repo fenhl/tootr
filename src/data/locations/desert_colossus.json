@@ -451,6 +451,27 @@
         }
       ]
     },
+    "Colossus Gossip Stone": {
+      "area": "Desert Colossus",
+      "lKey": "",
+      "alias": "Back Left",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Colossus Gossip Stone Drop": {
       "area": "Desert Colossus",
       "lKey": "",

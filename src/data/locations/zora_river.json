@@ -603,6 +603,27 @@
         }
       ]
     },
+    "ZR Near Grottos Gossip Stone": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Near Grottos",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "ZR Near Grottos Gossip Stone Drop": {
       "area": "Zora River",
       "lKey": "",
@@ -912,6 +933,27 @@
       "alias": "Upper River Freestanding Item",
       "type": "item",
       "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Near Domain Gossip Stone": {
+      "area": "Zora River",
+      "lKey": "",
+      "alias": "Near Domain",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
       "visible": true,
       "check": "",
       "foundItem": "",
@@ -2077,6 +2119,27 @@
         {
           "setting": "Shuffle Beehives",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ZR Open Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Zora River -> ZR Open Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

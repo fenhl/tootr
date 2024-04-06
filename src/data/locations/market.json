@@ -2232,6 +2232,27 @@
         }
       ]
     },
+    "HC Malon Gossip Stone": {
+      "area": "Castle Grounds",
+      "lKey": "",
+      "alias": "Above Malon",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "HC Malon Gossip Stone Drop": {
       "area": "Castle Grounds",
       "lKey": "",
@@ -2241,6 +2262,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "HC Rock Wall Gossip Stone": {
+      "area": "Castle Grounds",
+      "lKey": "",
+      "alias": "Rock Wall",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],
@@ -2765,6 +2807,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "HC Storms Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Hyrule Castle Grounds -> HC Storms Grotto",
+      "alias": "Mud Wall",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "HC Storms Grotto Gossip Stone Drop": {
       "area": "",
       "lKey": "Hyrule Castle Grounds -> HC Storms Grotto",
@@ -2870,6 +2933,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "ToT Gossip Stone (Left)": {
+      "area": "Temple of Time Entrance",
+      "lKey": "",
+      "alias": "Left",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "ToT Gossip Stone (Left) Drop": {
       "area": "Temple of Time Entrance",
       "lKey": "",
@@ -2879,6 +2963,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ToT Gossip Stone (Left-Center)": {
+      "area": "Temple of Time Entrance",
+      "lKey": "",
+      "alias": "Left-Center",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],
@@ -2912,6 +3017,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "ToT Gossip Stone (Right-Center)": {
+      "area": "Temple of Time Entrance",
+      "lKey": "",
+      "alias": "Right-Center",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "ToT Gossip Stone (Right) Drop": {
       "area": "Temple of Time Entrance",
       "lKey": "",
@@ -2921,6 +3047,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ToT Gossip Stone (Right)": {
+      "area": "Temple of Time Entrance",
+      "lKey": "",
+      "alias": "Right",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],
@@ -2996,6 +3143,48 @@
       "alias": "Light Arrow Cutscene",
       "type": "item",
       "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ToT Child Altar Hint": {
+      "area": "",
+      "lKey": "ToT Entrance -> Temple of Time",
+      "alias": "Child Altar",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "ToT Adult Altar Hint": {
+      "area": "",
+      "lKey": "ToT Entrance -> Temple of Time",
+      "alias": "Adult Altar",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
       "visible": true,
       "check": "",
       "foundItem": "",

@@ -1651,6 +1651,27 @@
         }
       ]
     },
+    "LH Lab Gossip Stone": {
+      "area": "Lake Hylia",
+      "lKey": "",
+      "alias": "Near Lab",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "LH Lab Gossip Stone Drop": {
       "area": "Lake Hylia",
       "lKey": "",
@@ -1672,6 +1693,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "LH Gossip Stone (Southeast)": {
+      "area": "Lake Hylia",
+      "lKey": "",
+      "alias": "Southeast",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "LH Gossip Stone (Southeast) Drop": {
       "area": "Lake Hylia",
       "lKey": "",
@@ -1681,6 +1723,27 @@
         {
           "setting": "Shuffle Gossip Stones",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LH Gossip Stone (Southwest)": {
+      "area": "Lake Hylia",
+      "lKey": "",
+      "alias": "Southwest",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

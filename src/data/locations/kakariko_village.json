@@ -2527,6 +2527,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "Kak Open Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Kak Backyard -> Kak Open Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "Kak Open Grotto Gossip Stone Drop": {
       "area": "",
       "lKey": "Kak Backyard -> Kak Open Grotto",

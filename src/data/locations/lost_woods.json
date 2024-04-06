@@ -417,6 +417,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "LW Gossip Stone": {
+      "area": "Lost Woods",
+      "lKey": "",
+      "alias": "Near Bridge",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "LW Gossip Stone Drop": {
       "area": "Lost Woods",
       "lKey": "",
@@ -1297,6 +1318,27 @@
         {
           "setting": "Shuffle Beehives",
           "value": "On",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "LW Near Shortcuts Grotto Gossip Stone": {
+      "area": "",
+      "lKey": "Lost Woods -> LW Near Shortcuts Grotto",
+      "alias": "Grotto Gossip Stone",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
           "required": true
         }
       ],

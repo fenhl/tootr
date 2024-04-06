@@ -333,6 +333,27 @@
       "shuffled": true,
       "shuffleRules": []
     },
+    "ZD Gossip Stone": {
+      "area": "Zora's Domain",
+      "lKey": "",
+      "alias": "Near King Zora",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
     "ZD Gossip Stone Drop": {
       "area": "Zora's Domain",
       "lKey": "",
