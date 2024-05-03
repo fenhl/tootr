@@ -188,6 +188,9 @@ import OoT_C_Up_Icon from './images/ocarina_c_up.yellow.png';
 import OoT_C_Down_Icon from './images/ocarina_c_down.yellow.png';
 import OoT_C_Left_Icon from './images/ocarina_c_left.yellow.png';
 import OoT_C_Right_Icon from './images/ocarina_c_right.yellow.png';
+import OoT_Bug_Icon from './images/OoT_Bug_Icon.png';
+import OoT_Fairy_Icon from './images/OoT_Fairy_Icon.png';
+import OoT_Fish_Icon from './images/OoT_Fish_Icon.png';
 
 
 class OotIcon extends React.Component {
@@ -329,6 +332,10 @@ class OotIcon extends React.Component {
             'Ocarina Note C Right': OoT_C_Right_Icon,
             'Ocarina Note C Left': OoT_C_Left_Icon,
             'Enemy Soul Token': OoT_Soul_Icon,
+            'Bugs': OoT_Bug_Icon,
+            'Deku Nut': OoT_Deku_Nut_Icon,
+            'Fairy': OoT_Fairy_Icon,
+            'Fish': OoT_Fish_Icon,
         };
         let keyMap = {
             'Forest Temple': 'Fo',

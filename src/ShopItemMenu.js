@@ -52,6 +52,20 @@ class ShopItemMenu extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid container spacing={0} className={this.props.itemMenuRow}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bugs">
+                            <OotIcon classes={this.props.classes} itemName="Bugs" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fairy">
+                            <OotIcon classes={this.props.classes} itemName="Fairy" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fish">
+                            <OotIcon classes={this.props.classes} itemName="Fish" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Nut">
+                            <OotIcon classes={this.props.classes} itemName="Deku Nut" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={0} className={this.props.itemMenuRow}>
                         <Grid item xs={12} onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="">
                             <p className={this.props.classes.locationMenuClear}>Clear Item</p>
                         </Grid>
