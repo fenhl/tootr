@@ -18,6 +18,12 @@ class ShopItemMenu extends React.Component {
             >
                 <div>
                     <Grid container spacing={0} className={this.props.itemMenuRow}>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bugs">
+                            <OotIcon classes={this.props.classes} itemName="Bugs" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fish">
+                            <OotIcon classes={this.props.classes} itemName="Fish" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Goron Tunic">
                             <OotIcon classes={this.props.classes} itemName="Goron Tunic" className={this.props.classes.locationMenuIcon} />
                         </Grid>
@@ -38,8 +44,14 @@ class ShopItemMenu extends React.Component {
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Blue Fire">
                             <OotIcon classes={this.props.classes} itemName="Blue Fire" className={this.props.classes.locationMenuIcon} />
                         </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fairy">
+                            <OotIcon classes={this.props.classes} itemName="Fairy" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Stick">
                             <OotIcon classes={this.props.classes} itemName="Deku Stick" className={this.props.classes.locationMenuIcon} />
+                        </Grid>
+                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Nut">
+                            <OotIcon classes={this.props.classes} itemName="Deku Nut" className={this.props.classes.locationMenuIcon} />
                         </Grid>
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Arrows">
                             <OotIcon classes={this.props.classes} itemName="Arrows" className={this.props.classes.locationMenuIcon} />
@@ -49,20 +61,6 @@ class ShopItemMenu extends React.Component {
                         </Grid>
                         <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Hylian Shield">
                             <OotIcon classes={this.props.classes} itemName="Hylian Shield" className={this.props.classes.locationMenuIcon} />
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={0} className={this.props.itemMenuRow}>
-                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Bugs">
-                            <OotIcon classes={this.props.classes} itemName="Bugs" className={this.props.classes.locationMenuIcon} />
-                        </Grid>
-                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fairy">
-                            <OotIcon classes={this.props.classes} itemName="Fairy" className={this.props.classes.locationMenuIcon} />
-                        </Grid>
-                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Fish">
-                            <OotIcon classes={this.props.classes} itemName="Fish" className={this.props.classes.locationMenuIcon} />
-                        </Grid>
-                        <Grid item xs onClick={this.props.handleFind} data-found-in={this.props.sourceLocation} data-found-item="Deku Nut">
-                            <OotIcon classes={this.props.classes} itemName="Deku Nut" className={this.props.classes.locationMenuIcon} />
                         </Grid>
                     </Grid>
                     <Grid container spacing={0} className={this.props.itemMenuRow}>
