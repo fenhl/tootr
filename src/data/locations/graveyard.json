@@ -147,7 +147,7 @@
       "isReverse": false,
       "alias": "Dampe's Hut",
       "reverseAlias": "from Dampe's Hut",
-      "tag": "Empty Interior",
+      "tag": "",
       "tagRep": false,
       "tagRules": [],
       "enableTag": true,
@@ -1666,6 +1666,27 @@
       "alias": "Dampe's Race 2",
       "type": "item",
       "settings": [],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
+    },
+    "Dampe Diary Hint": {
+      "area": "",
+      "lKey": "Graveyard -> Graveyard Dampes House",
+      "alias": "Diary Hint",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
       "visible": true,
       "check": "",
       "foundItem": "",

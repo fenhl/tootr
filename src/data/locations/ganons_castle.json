@@ -5861,6 +5861,27 @@
       "walletTier": 0,
       "shuffled": true,
       "shuffleRules": []
+    },
+    "Ganondorf Hint": {
+      "area": "",
+      "lKey": "Ganons Castle -> Ganons Tower",
+      "alias": "Ganondorf Hint",
+      "type": "gossipStone",
+      "settings": [
+        {
+          "setting": "Show Hint Locations",
+          "value": "Yes",
+          "required": true
+        }
+      ],
+      "visible": true,
+      "check": "",
+      "foundItem": "",
+      "merchant": false,
+      "price": 0,
+      "walletTier": 0,
+      "shuffled": true,
+      "shuffleRules": []
     }
   }
 }
