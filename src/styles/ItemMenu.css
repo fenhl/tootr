@@ -1,0 +1,62 @@
+.locationMenuClear {
+    padding: calc(var(--theme-spacing) * 2);
+    margin: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.43;
+    color: var(--color-item-menu-text);
+}
+.locationMenuClear:hover {
+    background-color: var(--color-item-menu-hover);
+    cursor: pointer;
+}
+.itemMenuRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.locationItemMenu {
+    line-height: 0;
+    padding: 0;
+}
+.locationItemMenu ul {
+    padding: 0;
+    background-color: var(--color-item-menu);
+}
+.locationItemMenu.MuiMenu-root {
+    overflow: auto;
+}
+.locationItemMenu .iconLeftText {
+    color: var(--color-shadowed-text);
+}
+.locationItemMenu .iconLeftTopText {
+    color: var(--color-shadowed-text);
+}
+.locationItemMenu .iconCenterText {
+    color: var(--color-shadowed-text);
+}
+.locationItemMenu .iconRightText {
+    color: var(--color-shadowed-text);
+}
+.locationItemMenu .iconRightTopText {
+    color: var(--color-shadowed-text);
+}
+.locationItemMenu .iconDiv {
+    padding: 8px;
+}
+.locationItemMenu .iconDiv:hover {
+    background-color: var(--color-item-menu-hover);
+    cursor: pointer;
+    margin: 0 auto;
+}
+.itemMenuRow {
+    white-space: nowrap;
+    background-color: var(--color-item-menu);
+}
+.itemMenuRow div {
+    display: inline-block;
+}
+.itemMenuRow .itemMenuClear {
+    width: 100%;
+}

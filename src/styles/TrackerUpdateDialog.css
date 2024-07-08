@@ -1,0 +1,4 @@
+.MuiDialogContentText-root.redAlert {
+    color: var(--color-dialog-alert) !important;
+    font-size: 2em !important;
+}

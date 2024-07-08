@@ -1,0 +1,118 @@
+
+@container areaPaper (max-width: 600px) {
+    .warpMenu {
+        width: calc(100% - 12px);
+    }
+}
+@container areaPaper (min-width: 600px) {
+    .warpMenu {
+        border-radius: 8px 0px 0 0;
+        overflow: hidden;
+        border-left: 1px solid var(--color-warpmenu-border);
+    }    
+}
+.warpMenu {
+    position: fixed;
+    bottom: 0;
+    right: 12px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-warpmenu);
+    border-top: 1px solid var(--color-warpmenu-border);
+    max-height: 50%;
+}
+.warpMenu.raceModeBar {
+    background-color: var(--color-header-race-mode) !important;
+}
+.warpMenu .iconRightText {
+    color: var(--color-shadowed-text);
+}
+.warpMenu .iconTradeText {
+    color: var(--color-shadowed-text);
+}
+.warpIcon {
+    cursor: pointer;
+    position: relative;
+}
+.warpIcon,
+.warpMenu .iconDiv {
+    padding: 8px;
+    line-height: 0;
+}
+.warpIcon:hover,
+.warpMenu .iconDiv:hover {
+    background-color: var(--color-warpmenu-hover);
+    cursor: pointer;
+}
+.warpMenuVisible {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.expandWarpMenu {
+    color: var(--color-warpmenu-text) !important;
+    width: 32px !important;
+    height: 100% !important;
+    cursor: pointer !important;
+}
+.MuiCollapse-root.warpAreaList {
+    overflow-y: auto !important;
+    flex-grow: 1 !important;
+}
+.warpMenuArea {
+    display: block;
+    color: var(--color-warpmenu-text);
+    font-weight: bold;
+    padding: var(--theme-spacing);
+    cursor: pointer;
+}
+.warpMenuArea:hover {
+    background-color: var(--color-warpmenu-hover);
+}
+.warpMenuAreaHidden {
+    display: block;
+    color: var(--color-warpmenu-text-disabled);
+    font-weight: bold;
+    padding: var(--theme-spacing);
+}
+@container areaPaper (max-width: 600px) {
+    .warpSongsBig {
+        display: none;
+    }
+}
+@container areaPaper (min-width: 600px) {
+    .warpSongsBig {
+        display: flex;
+    }
+}
+@container areaPaper (max-width: 600px) {
+    .warpSongsSmall {
+        display: flex;
+    }
+}
+@container areaPaper (min-width: 600px) {
+    .warpSongsSmall {
+        display: none;
+    }
+}
+@container areaPaper (max-width: 600px) {
+    .warpSongsBlank {
+        color: var(--color-warpmenu-text-disabled);
+        width: 32px;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+@container areaPaper (min-width: 600px) {
+    .warpSongsBlank {
+        display: none;
+    }
+}
+.grayscaleMenuIcon :is(img, svg) {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%);
+}

@@ -1,0 +1,118 @@
+
+.ootDungeonContainer {
+    height: 48px;
+    color: var(--color-sidebar-text);
+    color: #fff;
+    font-family: 'Hylia Serif Beta';
+    font-size: 1.1rem;
+    line-height: 48px;
+    display: flex;
+}
+.ootDungeonContainer div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.med .ootDungeonContainer {
+    width: 264px;
+}
+.stone .ootDungeonContainer {
+    width: 216px;
+}
+.ootDungeonName.clickable:hover {
+    cursor: pointer;
+}
+.ootDungeonVariantContainer {
+    position: relative;
+}
+.ootDungeonVariant {
+    color: var(--color-sidebar-mq);
+    text-shadow: 0px 0px 6px var(--color-sidebar-shadow), 0px 0px 2px var(--color-sidebar-shadow), 0px 0px 2px var(--color-sidebar-shadow), 0px 0px 2px var(--color-sidebar-shadow), 0px 0px 2px var(--color-sidebar-shadow);
+    font-size: 1rem;
+    line-height: 32px;
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    cursor: pointer;
+}
+.ootDungeonItems {
+    font-size: 0.875rem;
+    line-height: 0;
+    margin-right: 8px;
+}
+.ootDungeonLabelContainer {
+    width: 48px;
+    margin-left: 8px;
+    flex-grow: 1;
+    position: relative;
+}
+.ootDungeonTCGItemsLastRow,
+.ootDungeonItemsLastRow {
+    width: var(--drawer-width);
+    display: flex;
+    justify-content: center;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonContainer,
+.ootDungeonItemsLastRow .ootDungeonContainer {
+    display: flex;
+    justify-content: center;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonItems,
+.ootDungeonItemsLastRow .ootDungeonItems {
+    margin-right: 0;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonContainer {
+    min-width: 117px;
+    width: auto;
+}
+.ootDungeonItemsLastRow .ootDungeonContainer {
+    width: 160px;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonLabelContainer,
+.ootDungeonItemsLastRow .ootDungeonLabelContainer {
+    flex-grow: unset;
+    width: auto;
+    margin-right: 6px;
+}
+.ootDungeonMedItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv,
+.ootDungeonSideItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv,
+.ootDungeonStoneItemsContainer .ootDungeonContainer .ootDungeonItems .iconDiv {
+    padding: 8px 6px;
+}
+.ootDungeonInsetContainer {
+    position: relative;
+}
+.ootDungeonInset1,
+.ootDungeonInset2,
+.ootDungeonInset3 {
+    position: absolute;
+    height: 40px;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 5px;
+    top: 4px;
+    box-shadow: inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.2), inset 0.2em 0.2em 0.2em 0 rgba(0,0,0,0.3);
+    z-index: -3;
+}
+.ootDungeonTCGItemsLastRow .ootDungeonInset1,
+.ootDungeonItemsLastRow .ootDungeonInset1 {
+    width: 40px;
+    right: -4px;
+}
+.ootDungeonInset1 {
+    width: 40px;
+    right: 100px;
+}
+.ootDungeonInset2 {
+    width: 88px;
+    right: 52px;
+}
+.ootDungeonInset3 {
+    width: 136px;
+    right: 4px;
+}
+.ootItemTracker .ootDungeonContainer .iconDiv {
+    padding: 8px;
+}
+.ootItemTracker .ootDungeonContainer .iconContainer {
+    width: 32px;
+    height: 32px;
+}

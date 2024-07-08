@@ -1,0 +1,10 @@
+.raceTimer {
+    width: 100%;
+    font-family: 'DS-Digital';
+    font-size: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    color: var(--color-sidebar-text);
+    background-color: var(--color-sidebar);
+    border-bottom: 1px solid var(--color-sidebar-border);
+}

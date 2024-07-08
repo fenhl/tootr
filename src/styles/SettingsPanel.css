@@ -1,0 +1,132 @@
+.settingsContainer {
+    font-family: 'Hylia Serif Beta';
+    color: var(--color-sidebar-text);
+}
+.settingTabName {
+    color: var(--color-sidebar-text);
+}
+.settingSectionName {
+    color: var(--color-sidebar-text);
+}
+.settingsListContainer .settingSectionName {
+    font-family: 'Hylia Serif Beta';
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.settingSectionContainer .settingSectionName {
+    font-family: 'Hylia Serif Beta';
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.settingSectionContainer .settingMenuRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.settingSectionContainer {
+    margin: calc(var(--theme-spacing) * 1.5) var(--theme-spacing);
+    border: 1px solid var(--color-sidebar-text);
+    border-radius: var(--theme-spacing);
+    padding-bottom: var(--theme-spacing);
+}
+.settingListSectionContainer {
+    margin: calc(var(--theme-spacing) * 1.5) var(--theme-spacing);
+    border: 1px solid var(--color-sidebar-text);
+    border-radius: var(--theme-spacing);
+    padding-bottom: var(--theme-spacing);
+}
+.settingCollectionContainer {
+    line-height: 0;
+    padding: 0;
+}
+.settingCollectionContainer ul {
+    padding: 0;
+    background-color: var(--color-sidebar);
+}
+.settingCollectionContainer .svgIcon {
+    width: 32px !important;
+}
+.settingCollectionContainer .iconLeftText {
+    color: var(--color-shadowed-text);
+}
+.settingCollectionContainer .iconLeftTopText {
+    color: var(--color-shadowed-text);
+}
+.settingCollectionContainer .iconCenterText {
+    color: var(--color-shadowed-text);
+}
+.settingCollectionContainer .iconRightText {
+    color: var(--color-shadowed-text);
+}
+.settingCollectionContainer .iconRightTopText {
+    color: var(--color-shadowed-text);
+}
+.settingCollectionContainer .iconDiv {
+    padding: 8px;
+}
+.settingCollectionContainer .iconDiv:hover {
+    background-color: var(--color-sidebar-hover);
+    cursor: pointer;
+    margin: 0 auto;
+}
+.settingMenuRow {
+    white-space: nowrap;
+    background-color: var(--color-sidebar);
+}
+.settingMenuRow label {
+    max-width: 400px;
+    text-wrap: wrap;
+}
+.iconTooltipLeftTop ~ .iconTooltipWrapper {
+    right: auto;
+    left: 0px;
+    top: auto;
+    bottom: 48px;
+}
+.iconTooltipLeftTop ~ .iconTooltipWrapper .iconTooltip {
+    right: auto;
+    left: 0px;
+    top: auto;
+    bottom: 0px;
+}
+.iconTooltipRightTop ~ .iconTooltipWrapper {
+    right: 0px;
+    left: auto;
+    top: auto;
+    bottom: 48px;
+}
+.iconTooltipRightTop ~ .iconTooltipWrapper .iconTooltip {
+    right: 0px;
+    left: auto;
+    top: auto;
+    bottom: 0px;
+}
+.iconTooltipLeftBottom ~ .iconTooltipWrapper {
+    right: auto;
+    left: 0px;
+    top: 48px;
+    bottom: auto;
+}
+.iconTooltipLeftBottom ~ .iconTooltipWrapper .iconTooltip {
+    right: auto;
+    left: 0px;
+    top: 0px;
+    bottom: auto;
+}
+.iconTooltipRightBottom ~ .iconTooltipWrapper {
+    right: 0px;
+    left: auto;
+    top: 48px;
+    bottom: auto;
+}
+.iconTooltipRightBottom ~ .iconTooltipWrapper .iconTooltip {
+    right: 0px;
+    left: auto;
+    top: 0px;
+    bottom: auto;
+}
