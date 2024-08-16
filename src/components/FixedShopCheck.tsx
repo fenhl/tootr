@@ -3,7 +3,7 @@ import OotItemIcon, { haveOotItemIcon } from './OotItemIcon';
 import AddIcon from '@mui/icons-material/Add';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import type ContextMenuHandler from './ContextMenuHandler';
-import { GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/FixedShopCheck.css';
 

@@ -3,7 +3,7 @@ import GameSetting from "./GameSetting";
 import GameSettingMultiselect from "./GameSettingMultiselect";
 import GameSettingSwitch from "./GameSettingSwitch";
 
-import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting } from '@mracsys/randomizer-graph-tool';
+import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/SettingsPanel.css';
 

@@ -7,7 +7,7 @@ import ItemMenu from './ItemMenu';
 import ListMenu from "./ListMenu";
 import { location_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { GraphRegion, GraphEntrancePool, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrancePool, GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/HintMenu.css';
 import { location_item_menu_layout_vertical } from "@/data/location_item_menu_layout_vertical";

@@ -3,7 +3,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import React, { MouseEvent } from 'react';
 import { buildEntranceName } from './UnknownEntrance';
 
-import { GraphEntrance } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance } from '@fenhl/randomizer-graph-tool';
 import LogicIndicator from './LogicIndicator';
 
 import '@/styles/EntranceStyles.css';

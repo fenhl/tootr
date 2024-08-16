@@ -3,7 +3,7 @@ import OotSettingIcon from "./OotSettingIcon";
 import { OotSettingAssetMapFactory } from "./OotSettingAssetMap";
 import { IconDict } from "./OotIcon";
 
-import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting, GameVersion } from '@mracsys/randomizer-graph-tool';
+import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSettingsLayout, GraphSetting, GameVersion } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/SettingsPanel.css';
 

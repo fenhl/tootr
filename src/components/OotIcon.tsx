@@ -1,7 +1,7 @@
 import React from "react";
 import { SvgIconComponent } from "@mui/icons-material";
 import { MouseEventHandler } from "react";
-import { GraphSettingType } from "@mracsys/randomizer-graph-tool";
+import { GraphSettingType } from "@fenhl/randomizer-graph-tool";
 import ContextMenuHandlerWithArgs from "./ContextMenuHandlerWithArgs";
 
 import '@/styles/OotIcon.css';

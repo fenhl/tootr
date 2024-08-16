@@ -2,7 +2,7 @@ import React from 'react';
 import { labelEntry } from "@/data/item_panel_layout";
 import { SilverRupeeDisplayIcon } from './SilverRupeeDisplayIcon';
 import ContextMenuHandlerWithArgs from './ContextMenuHandlerWithArgs';
-import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@fenhl/randomizer-graph-tool';
 import { createBlankTrackerItem } from "./OotItemPanel";
 import OotItemIcon from './OotItemIcon';
 import ContextMenuHandler from "./ContextMenuHandler";

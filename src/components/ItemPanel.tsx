@@ -1,6 +1,6 @@
 import React from 'react';
 import { OotItemPanel } from "./OotItemPanel";
-import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/ItemPanel.css';
 

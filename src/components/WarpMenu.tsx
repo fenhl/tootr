@@ -7,7 +7,7 @@ import Collapse from '@mui/material/Collapse';
 import PublicIcon from '@mui/icons-material/Public';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import SwitchAccessShortcutIcon from '@mui/icons-material/SwitchAccessShortcut';
-import { GraphRegion, GraphEntrance } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/WarpMenu.css';
 

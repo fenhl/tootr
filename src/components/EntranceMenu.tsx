@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '@mui/material/Menu';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-import { GraphEntrance, GraphEntrancePool, GraphRegion } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphEntrancePool, GraphRegion } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/EntranceMenu.css';
 

@@ -10,7 +10,7 @@ import { Drawer, Tabs, Tab } from "@mui/material";
 import SettingMultiselectMenu from './SettingMultiselectMenu';
 import { TrackerSettingsCurrent, tracker_settings_defs, tracker_setting_definition, copyTrackerSettings, region_visibility_values } from "@/data/tracker_settings";
 
-import { GraphGameVersions, GraphRegion, GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout, GameVersion } from '@mracsys/randomizer-graph-tool';
+import { GraphGameVersions, GraphRegion, GraphEntrance, GraphLocation, GraphSettingsConfiguration, GraphSettingsOptions, GraphSettingsLayout, GameVersion } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/TrackerDrawer.css';
 import RaceTimer from "./RaceTimer";

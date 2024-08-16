@@ -4,7 +4,7 @@ import LinkedEntrance from './LinkedEntrance'
 import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 
-import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance, GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 export const buildEntranceName = (entrance: GraphEntrance): string => {
     //let eLink = !!(entrance.replaces) ? entrance.replaces : entrance;

@@ -16,7 +16,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import { merge } from "lodash";
 
-import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSetting, GameVersion } from '@mracsys/randomizer-graph-tool';
+import { GraphSettingsOptions, GraphSettingsConfiguration, GraphSetting, GameVersion } from '@fenhl/randomizer-graph-tool';
 import MusicNote from "./MusicNote";
 
 const settingValueDisplay = (graphSettings: GraphSettingsConfiguration, setting: GraphSetting): string => {

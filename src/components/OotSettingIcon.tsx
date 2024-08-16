@@ -4,7 +4,7 @@ import ContextMenuHandlerWithArgs from "./ContextMenuHandlerWithArgs";
 import type { ContextCallback } from "./ContextMenuHandlerWithArgs";
 import OotIcon, { IconDict, IconData } from "./OotIcon";
 
-import { GraphSettingsOptions } from '@mracsys/randomizer-graph-tool';
+import { GraphSettingsOptions } from '@fenhl/randomizer-graph-tool';
 
 export interface OotSettingIconProps {
     itemName: string,

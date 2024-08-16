@@ -1,6 +1,6 @@
 import OotItemIcon from './OotItemIcon';
 import ContextMenuHandlerWithArgs from './ContextMenuHandlerWithArgs';
-import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphLocation, GraphSettingsConfiguration } from '@fenhl/randomizer-graph-tool';
 import { itemPanelLayout, itemEntry } from '@/data/item_panel_layout.ts';
 import React, { useState, useEffect } from 'react';
 import { OotDungeonTracker } from './OotDungeonTracker';

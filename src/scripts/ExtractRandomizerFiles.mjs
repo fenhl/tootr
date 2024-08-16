@@ -1,4 +1,4 @@
-import { WorldGraphFactory } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory } from '@fenhl/randomizer-graph-tool';
 import { execSync } from 'node:child_process';
 import { mkdirSync, readdirSync } from "fs";
 import { resolve, dirname } from 'path';

@@ -11,7 +11,7 @@ import type ContextMenuHandler from './ContextMenuHandler';
 import type { MouseEvent } from 'react';
 import { buildEntranceName, buildExitName, buildExitEntranceName } from './UnknownEntrance';
 
-import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance, GraphLocation } from '@fenhl/randomizer-graph-tool';
 import LogicIndicator from './LogicIndicator';
 
 import '@/styles/EntranceStyles.css';

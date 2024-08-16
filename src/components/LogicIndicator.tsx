@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphEntrance, GraphLocation } from '@fenhl/randomizer-graph-tool';
 import { PropsWithChildren } from 'react';
 
 import '@/styles/LogicIndicator.css';

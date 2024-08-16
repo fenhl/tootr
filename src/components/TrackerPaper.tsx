@@ -6,7 +6,7 @@ import type ContextMenuHandler from './ContextMenuHandler';
 import type { CollapsedRegions } from './Tracker';
 import WarpMenu from './WarpMenu';
 
-import { GraphRegion, GraphEntrance } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/TrackerPaper.css';
 

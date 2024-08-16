@@ -8,7 +8,7 @@ import LocationCheck from './LocationCheck';
 import type { CollapsedRegions } from './Tracker';
 import type ContextMenuHandler from './ContextMenuHandler';
 
-import { GraphRegion, GraphEntrance, GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphRegion, GraphEntrance, GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/GameArea.css';
 import OotItemIcon from './OotItemIcon';

@@ -1,4 +1,4 @@
-import { GraphPlugin, WorldGraphFactory } from "@mracsys/randomizer-graph-tool";
+import { GraphPlugin, WorldGraphFactory } from "@fenhl/randomizer-graph-tool";
 import { createContext } from "react";
 
 const defaultGraph = WorldGraphFactory('ootr', {}, '7.1.143', {files: {}, subfolder: ''});

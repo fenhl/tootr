@@ -6,7 +6,7 @@ import { SeedMenu } from "./SeedMenu";
 import { TrackerSettingsCurrent } from "@/data/tracker_settings";
 import type { SavedTrackerState } from './Tracker';
 
-import { GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/TrackerTopBar.css';
 

@@ -9,7 +9,7 @@ import ContextMenuHandler from './ContextMenuHandler';
 import LogicIndicator from './LogicIndicator';
 import { buildExitName, buildExitEntranceName } from './UnknownEntrance';
 
-import { GraphLocation } from '@mracsys/randomizer-graph-tool';
+import { GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/LocationCheck.css';
 

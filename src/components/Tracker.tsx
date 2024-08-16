@@ -22,7 +22,7 @@ import {
 } from '@/data/tracker_settings';
 import { location_item_menu_layout, shop_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, ExternalFileCacheList, GraphEntrance, GraphRegion, GraphHintGoal, GraphPlugin } from '@mracsys/randomizer-graph-tool';
+import { WorldGraphFactory, ExternalFileCacheFactory, ExternalFileCache, ExternalFileCacheList, GraphEntrance, GraphRegion, GraphHintGoal, GraphPlugin } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/tracker.css';
 import '@/styles/themes/light.css';
