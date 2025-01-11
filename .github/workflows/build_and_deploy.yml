@@ -3,8 +3,7 @@ name: Publish
 on:
   push:
     branches: 
-      - master
-      - logic-refactor
+      - dev-fenhl
 
 jobs:
   build:
