@@ -129,9 +129,14 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
             'Dungeons',
         ]
     },
-    one_region_per_page: {
-        display_name: 'Show Individual Region Pages',
-        type: 'bool',
+    page_mode: {
+        display_name: 'Pages',
+        type: 'str',
+        options: [
+            'Everything on One Page',
+            'Overworld and Dungeons',
+            'Individual Regions',
+        ],
     },
     setting_icons: {
         display_name: 'Show Game Settings as Icons',

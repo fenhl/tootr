@@ -114,7 +114,7 @@ const Tracker = (_props: {}) => {
     const [playerNumber, setPlayerNumber] = useState<number>(0);
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
     const [regionPage, setRegionPage] = useState<string>('Overworld');
-    const [oneRegionPerPage, setOneRegionPerPage] = useState<boolean>(false);
+    const [pageMode, setPageMode] = useState<string>('Overworld and Dungeons');
     const [expandSidebar, setExpandSidebar] = useState<boolean>(true);
     const [darkMode, setDarkMode] = useState<boolean>(false);
     const [showAgeLogic, setShowAgeLogic] = useState<boolean>(false);
@@ -828,8 +828,8 @@ const Tracker = (_props: {}) => {
                 setRegionPage(setting.target.value as string);
                 setLastEntranceName('');
                 break;
-            case 'one_region_per_page':
-                setOneRegionPerPage(setting.target.value as boolean);
+            case 'page_mode':
+                setPageMode(setting.target.value as string);
                 break;
             case 'expand_sidebar':
                 setExpandSidebar(setting.target.value as boolean);
@@ -1600,7 +1600,7 @@ const Tracker = (_props: {}) => {
             player_number: playerNumber,
             setting_icons: settingIcons,
             region_page: regionPage,
-            one_region_per_page: oneRegionPerPage,
+            page_mode: pageMode,
             expand_sidebar: expandSidebar,
             dark_mode: darkMode,
             show_age_logic: showAgeLogic,
