@@ -5,6 +5,7 @@ export interface tracker_settings_definitions_v1 {
     game_version: tracker_setting_definition,
     player_number: tracker_setting_definition,
     setting_icons: tracker_setting_definition,
+    stream_mode: tracker_setting_definition,
     region_page: tracker_setting_definition,
     page_mode: tracker_setting_definition,
     dark_mode: tracker_setting_definition,
@@ -26,6 +27,7 @@ export interface tracker_settings_v1 {
     game_version: string,
     player_number: number,
     setting_icons: boolean,
+    stream_mode: boolean,
     expand_sidebar: boolean,
     region_page: string,
     page_mode: string,
@@ -67,6 +69,7 @@ export const tracker_settings_default: TrackerSettingsCurrent = {
     setting_icons: true,
     region_page: 'Overworld',
     page_mode: 'Overworld and Dungeons',
+    stream_mode: false,
     expand_sidebar: true,
     dark_mode: false,
     show_age_logic: false,
@@ -98,6 +101,10 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
     player_number: {
         display_name: 'Player Number',
         type: 'int',
+    },
+    stream_mode: {
+        display_name: 'Stream Mode',
+        type: 'bool',
     },
     dark_mode: {
         display_name: 'Dark Mode',

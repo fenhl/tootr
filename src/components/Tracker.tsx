@@ -115,6 +115,7 @@ const Tracker = (_props: {}) => {
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
     const [regionPage, setRegionPage] = useState<string>('Overworld');
     const [pageMode, setPageMode] = useState<string>('Overworld and Dungeons');
+    const [streamMode, setStreamMode] = useState<boolean>(false);
     const [expandSidebar, setExpandSidebar] = useState<boolean>(true);
     const [darkMode, setDarkMode] = useState<boolean>(false);
     const [showAgeLogic, setShowAgeLogic] = useState<boolean>(false);
@@ -278,6 +279,7 @@ const Tracker = (_props: {}) => {
         let clientRegionPage = localStorage.getItem('RegionPage');
         let clientOneRegionPerPage = localStorage.getItem('OneRegionPerPage');
         let clientPageMode = localStorage.getItem('PageMode');
+        let clientStreamMode = localStorage.getItem('StreamMode');
         let clientExpandSidebar = localStorage.getItem('ExpandSidebar');
         let clientDarkMode = localStorage.getItem('DarkMode');
         let clientShowAgeLogic = localStorage.getItem('ShowAgeLogic');
@@ -296,6 +298,7 @@ const Tracker = (_props: {}) => {
         let settingIconsInit = clientSettingIcons !== null ? JSON.parse(clientSettingIcons) : settingIcons;
         let regionPageInit = clientRegionPage !== null ? JSON.parse(clientRegionPage) : regionPage;
         let pageModeInit = clientPageMode !== null ? JSON.parse(clientPageMode) : clientOneRegionPerPage !== null ? (JSON.parse(clientOneRegionPerPage) ? 'Individual Regions' : 'Overworld and Dungeons') : pageMode;
+        let streamModeInit = clientStreamMode !== null ? JSON.parse(clientStreamMode) : streamMode;
         let expandSidebarInit = clientExpandSidebar !== null ? JSON.parse(clientExpandSidebar) : expandSidebar;
         let darkModeInit = clientDarkMode !== null ? JSON.parse(clientDarkMode) : darkMode;
         let showAgeLogicInit = clientShowAgeLogic !== null ? JSON.parse(clientShowAgeLogic) : showAgeLogic;
@@ -376,6 +379,7 @@ const Tracker = (_props: {}) => {
         setSettingIcons(settingIconsInit);
         setRegionPage(regionPageInit);
         setPageMode(pageModeInit);
+        setStreamMode(streamModeInit);
         setExpandSidebar(expandSidebarInit);
         setDarkMode(darkModeInit);
         setShowAgeLogic(showAgeLogicInit);
@@ -420,6 +424,9 @@ const Tracker = (_props: {}) => {
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('PageMode', JSON.stringify(pageMode));
     }, [pageMode]);
+    useEffect(() => {
+        if (trackerInitialized) localStorage.setItem('StreamMode', JSON.stringify(streamMode));
+    }, [streamMode]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('ExpandSidebar', JSON.stringify(expandSidebar));
     }, [expandSidebar]);
@@ -831,6 +838,9 @@ const Tracker = (_props: {}) => {
                 break;
             case 'page_mode':
                 setPageMode(setting.target.value as string);
+                break;
+            case 'stream_mode':
+                setStreamMode(setting.target.value as boolean);
                 break;
             case 'expand_sidebar':
                 setExpandSidebar(setting.target.value as boolean);
@@ -1613,6 +1623,7 @@ const Tracker = (_props: {}) => {
             setting_icons: settingIcons,
             region_page: regionPage,
             page_mode: pageMode,
+            stream_mode: streamMode,
             expand_sidebar: expandSidebar,
             dark_mode: darkMode,
             show_age_logic: showAgeLogic,

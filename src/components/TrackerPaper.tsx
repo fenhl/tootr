@@ -80,7 +80,9 @@ const TrackerPaper = ({
         min-column-width = 540px
         cutoff = window-padding + (column-width + column-gap) * column-count
     */
-    const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.expand_sidebar ? {
+    const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.stream_mode ? {
+        0: 2,
+    } : trackerSettings.expand_sidebar ? {
         0:    1,
         1360: 2,
         1780: 3,
