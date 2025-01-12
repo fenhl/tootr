@@ -49,6 +49,7 @@ interface GameAreaProps {
     simMode: boolean,
     lastLocationName: string[],
     peekedLocations: Set<string>,
+    alwaysExpanded: boolean,
 }
 
 const GameArea = ({
@@ -87,11 +88,12 @@ const GameArea = ({
     simMode,
     lastLocationName,
     peekedLocations,
+    alwaysExpanded,
 }: GameAreaProps) => {
     const preventDefault: MouseEventHandler = (event: MouseEvent) => event.preventDefault();
     let title = region.name;
 
-    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
+    let filteredLocations: GraphLocation[] = locations.filter((location) => showAreaLocations && locationFilter(location, alwaysExpanded, collapsedRegions, title, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations, searchTerm));
     // At the moment, the only unshuffled entrances that have
     // connectors of a different entrance type are:
     //      Dampe's Grave -> Windmill exit
@@ -103,7 +105,7 @@ const GameArea = ({
     let connectorShuffled = false;
     let filteredEntrances: GraphEntrance[] = entrances.filter((entrance) => 
         ((!showUnshuffledEntrances && (entrance.shuffled || connectorShuffled)) || showUnshuffledEntrances) &&
-        entranceOrTargetMatchesTerm(entrance, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
+        entranceOrTargetMatchesTerm(entrance, alwaysExpanded, collapsedRegions, title, searchTerm, showEntranceLocations, showShops, showHints, region.is_not_required, lastLocationName, simMode, peekedLocations)).sort((a, b) => a.type_priority - b.type_priority || a.alias.localeCompare(b.alias));
 
     // Don't show areas that don't match search criteria
     if (filteredEntrances.length === 0 && filteredLocations.length === 0 && searchTerm !== '') {
@@ -132,6 +134,7 @@ const GameArea = ({
                     data-source={title}
                 >
                     {
+                        alwaysExpanded ? null :
                         (collapsedRegions[title] === 'none') ?
                             <ExpandMore className="collapseArea" />
                             : (collapsedRegions[title] === 'some' || collapsedRegions[title] === undefined) ?
@@ -185,7 +188,7 @@ const GameArea = ({
                 }
             </div>
             {
-                (collapsedRegions[title] !== 'all') ?
+                (alwaysExpanded || collapsedRegions[title] !== 'all') ?
                 <div>
                     <div className='areaLocations'>
                     { filteredLocations.map((location, i) => { 
@@ -204,7 +207,7 @@ const GameArea = ({
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
-                                collapseRegion={collapsedRegions[title]}
+                                collapseRegion={alwaysExpanded ? 'none' : collapsedRegions[title]}
                                 peekedLocations={peekedLocations}
                             />
                         </React.Fragment>)
@@ -215,6 +218,7 @@ const GameArea = ({
                             <React.Fragment key={title + "entranceScrollContainer" + i}>
                                 <div className="scrollControl" ref={(e) => setRef(title + entrance.name, e)} id={title + "entranceScrollContainer" + i} key={title + "entranceScrollContainer" + i} />
                                 <UnknownEntrance
+                                    alwaysExpanded={alwaysExpanded}
                                     title={title}
                                     playerNum={playerNum}
                                     collapsedRegions={collapsedRegions}

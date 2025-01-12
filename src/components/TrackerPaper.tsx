@@ -177,6 +177,7 @@ const TrackerPaper = ({
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
                                 peekedLocations={peekedLocations}
+                                alwaysExpanded={trackerSettings.stream_mode}
                             />
                         )
                     })

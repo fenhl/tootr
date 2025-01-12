@@ -17,6 +17,7 @@ import LogicIndicator from './LogicIndicator';
 import '@/styles/EntranceStyles.css';
 
 interface LinkedEntranceProps {
+    alwaysExpanded: boolean,
     title: string,
     playerNum: number,
     collapsedRegions: CollapsedRegions,
@@ -58,6 +59,7 @@ interface LinkedEntranceProps {
 }
 
 const LinkedEntrance = ({
+    alwaysExpanded,
     title,
     playerNum,
     collapsedRegions,
@@ -204,7 +206,7 @@ const LinkedEntrance = ({
                                 showAgeLogic={showAgeLogic}
                                 simMode={simMode}
                                 lastLocationName={lastLocationName}
-                                collapseRegion={collapsedRegions[title]}
+                                collapseRegion={alwaysExpanded ? 'none' : collapsedRegions[title]}
                                 peekedLocations={peekedLocations}
                             />
                         );
@@ -216,6 +218,7 @@ const LinkedEntrance = ({
             {
                 otherEntrances.map((otherEntrance, i) => { return (
                     <UnknownEntrance
+                        alwaysExpanded={alwaysExpanded}
                         forceVisible={true}
                         title={title}
                         playerNum={playerNum}
