@@ -103,7 +103,7 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
         type: 'int',
     },
     stream_mode: {
-        display_name: 'Stream Mode',
+        display_name: 'Stream Mode (requires Masonry browser feature)', // Firefox (about:config): layout.css.grid-template-masonry-value.enabled
         type: 'bool',
     },
     dark_mode: {

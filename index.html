@@ -16,5 +16,43 @@
   <body scroll="no">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      var idleTime = 0;
+      var waitTime = 0;
+
+      function autoscroll() {
+        if (document.body.classList.contains('stream') && document.getElementById('globalEntranceMenuElement') === null) {
+          if (idleTime > 300) { // 10 seconds
+            let scrollContainer = document.getElementById('worldScrollContainer');
+            var prevScrollY = -20 - scrollContainer.children[0].getBoundingClientRect().top;
+            if (waitTime >= 0 || prevScrollY > 0) {
+              scrollContainer.scrollBy(0, 1);
+              if (-20 - scrollContainer.children[0].getBoundingClientRect().top == prevScrollY) {
+                if (waitTime >= window.innerHeight / 2) {
+                  scrollContainer.scrollTo(0, 0);
+                  waitTime = -window.innerHeight / 2;
+                } else {
+                  waitTime += 1;
+                }
+              } else {
+                waitTime = 0;
+              }
+            } else {
+              waitTime += 1;
+            }
+          } else {
+            idleTime += 1;
+          }
+        }
+      }
+
+      function resetTimer() {
+        idleTime = 0;
+      }
+
+      setInterval(autoscroll, 32);
+      document.onclick = resetTimer;
+      document.addEventListener('DOMMouseScroll', resetTimer);
+    </script>
   </body>
 </html>
