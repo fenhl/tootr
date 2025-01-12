@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, PropsWithChildren } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import GameArea from './GameArea';
 import { TrackerSettingsCurrent } from '@/data/tracker_settings';
@@ -9,6 +9,33 @@ import WarpMenu from './WarpMenu';
 import { GraphRegion, GraphEntrance } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/TrackerPaper.css';
+
+interface ExperimentalMasonryProps {
+    masonryBreakpoints: {[breakpoint: number]: number},
+    useExperimental: boolean,
+}
+
+const ExperimentalMasonry = ({
+    children,
+    masonryBreakpoints,
+    useExperimental,
+}: PropsWithChildren<ExperimentalMasonryProps>) => {
+    return (
+        <div>
+            {useExperimental ? (
+                <div style={{display: "grid", gridTemplateColumns: "repeat(2, minmax(120px, 1fr))", gridTemplateRows: "masonry", gap: "20px"}}>
+                    {children}
+                </div>
+            ) : (
+                <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
+                    <Masonry gutter="20px">
+                        {children}
+                    </Masonry>
+                </ResponsiveMasonry>
+            )}
+        </div>
+    )
+}
 
 interface TrackerPaperProps {
     viewableRegions: GraphRegion[],
@@ -80,9 +107,7 @@ const TrackerPaper = ({
         min-column-width = 540px
         cutoff = window-padding + (column-width + column-gap) * column-count
     */
-    const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.stream_mode ? {
-        0: 2,
-    } : trackerSettings.expand_sidebar ? {
+    const masonryBreakpoints: {[breakpoint: number]: number} = trackerSettings.expand_sidebar ? {
         0:    1,
         1360: 2,
         1780: 3,
@@ -111,8 +136,7 @@ const TrackerPaper = ({
                     <div className="lastEntranceNameMessage">{`Entered ${lastEntranceName}`}</div>
                     : null
                 }
-                <ResponsiveMasonry columnsCountBreakPoints={masonryBreakpoints}>
-                <Masonry gutter="20px">
+                <ExperimentalMasonry masonryBreakpoints={masonryBreakpoints} useExperimental={trackerSettings.stream_mode}>
                 {
                     viewableRegions.map((region, regionIndex) => {
                         return (
@@ -157,8 +181,7 @@ const TrackerPaper = ({
                         )
                     })
                 }
-                </Masonry>
-                </ResponsiveMasonry>
+                </ExperimentalMasonry>
             </div>
             <WarpMenu
                 isWarpAreaLinked={isWarpAreaLinked}
