@@ -6,7 +6,7 @@ export interface tracker_settings_definitions_v1 {
     player_number: tracker_setting_definition,
     setting_icons: tracker_setting_definition,
     region_page: tracker_setting_definition,
-    one_region_per_page: tracker_setting_definition,
+    page_mode: tracker_setting_definition,
     dark_mode: tracker_setting_definition,
     show_unshuffled_entrances: tracker_setting_definition,
     show_locations: tracker_setting_definition,
@@ -28,7 +28,7 @@ export interface tracker_settings_v1 {
     setting_icons: boolean,
     expand_sidebar: boolean,
     region_page: string,
-    one_region_per_page: boolean,
+    page_mode: string,
     dark_mode: boolean,
     show_unshuffled_entrances: boolean,
     show_locations: string,
@@ -66,7 +66,7 @@ export const tracker_settings_default: TrackerSettingsCurrent = {
     player_number: 0,
     setting_icons: true,
     region_page: 'Overworld',
-    one_region_per_page: false,
+    page_mode: 'Overworld and Dungeons',
     expand_sidebar: true,
     dark_mode: false,
     show_age_logic: false,
@@ -129,9 +129,14 @@ export const tracker_settings_defs: tracker_settings_definitions_v1 = {
             'Dungeons',
         ]
     },
-    one_region_per_page: {
-        display_name: 'Show Individual Region Pages',
-        type: 'bool',
+    page_mode: {
+        display_name: 'Pages',
+        type: 'str',
+        options: [
+            'Everything on One Page',
+            'Overworld and Dungeons',
+            'Individual Regions',
+        ],
     },
     setting_icons: {
         display_name: 'Show Game Settings as Icons',

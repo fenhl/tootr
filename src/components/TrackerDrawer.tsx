@@ -128,6 +128,16 @@ const TrackerDrawer = ({
         if (name === 'region_page') {
             setLastEntranceName('');
         }
+        if (name === 'page_mode') {
+            switch (value) {
+                case 'Everything on One Page':
+                case 'Overworld and Dungeons':
+                    newTrackerSettings.region_page = 'Overworld';
+                    break;
+                case 'Individual Regions':
+                    break;
+            }
+        }
         newTrackerSettings[name] = value;
         setTrackerSettings(newTrackerSettings);
     }
@@ -137,9 +147,6 @@ const TrackerDrawer = ({
         console.log('[Setting]', name, 'changed to', checked);
         let newTrackerSettings = copyTrackerSettings(trackerSettings);
         newTrackerSettings[name] = checked;
-        if (name === 'one_region_per_page' && !checked) {
-            newTrackerSettings.region_page = 'Overworld';
-        }
         if (name === 'race_mode') {
             setAlertReset(true);
             setCachedRaceMode(checked);
@@ -322,7 +329,7 @@ const TrackerDrawer = ({
                                     for (let o of def.options) {
                                         optionDict[o] = o;
                                     }
-                                    if (setting === 'region_page' && trackerSettings.one_region_per_page) {
+                                    if (setting === 'region_page' && trackerSettings.page_mode == 'Individual Regions') {
                                         for (let region of graphRegions) {
                                             optionDict[region.name] = region.name;
                                         }

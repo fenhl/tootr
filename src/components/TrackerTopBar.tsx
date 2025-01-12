@@ -69,7 +69,7 @@ const TrackerTopBar = ({
                 <div>
                     <div className="titleText">
                         {`${trackerSettings.region_page}`}
-                        <span>{` ${trackerSettings.one_region_per_page ? lastEntranceName : ''}`}</span>
+                        <span>{` ${trackerSettings.page_mode === 'Individual Regions' ? lastEntranceName : ''}`}</span>
                     </div>
                 </div>
             </div>

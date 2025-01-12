@@ -114,7 +114,7 @@ const Tracker = (_props: {}) => {
     const [playerNumber, setPlayerNumber] = useState<number>(0);
     const [settingIcons, setSettingIcons] = useState<boolean>(true);
     const [regionPage, setRegionPage] = useState<string>('Overworld');
-    const [oneRegionPerPage, setOneRegionPerPage] = useState<boolean>(false);
+    const [pageMode, setPageMode] = useState<string>('Overworld and Dungeons');
     const [expandSidebar, setExpandSidebar] = useState<boolean>(true);
     const [darkMode, setDarkMode] = useState<boolean>(false);
     const [showAgeLogic, setShowAgeLogic] = useState<boolean>(false);
@@ -277,6 +277,7 @@ const Tracker = (_props: {}) => {
         let clientSettingIcons = localStorage.getItem('SettingIcons');
         let clientRegionPage = localStorage.getItem('RegionPage');
         let clientOneRegionPerPage = localStorage.getItem('OneRegionPerPage');
+        let clientPageMode = localStorage.getItem('PageMode');
         let clientExpandSidebar = localStorage.getItem('ExpandSidebar');
         let clientDarkMode = localStorage.getItem('DarkMode');
         let clientShowAgeLogic = localStorage.getItem('ShowAgeLogic');
@@ -294,7 +295,7 @@ const Tracker = (_props: {}) => {
         let playerNumberInit = clientPlayerNumber !== null ? JSON.parse(clientPlayerNumber) : playerNumber;
         let settingIconsInit = clientSettingIcons !== null ? JSON.parse(clientSettingIcons) : settingIcons;
         let regionPageInit = clientRegionPage !== null ? JSON.parse(clientRegionPage) : regionPage;
-        let oneRegionPerPageInit = clientOneRegionPerPage !== null ? JSON.parse(clientOneRegionPerPage) : oneRegionPerPage;
+        let pageModeInit = clientPageMode !== null ? JSON.parse(clientPageMode) : clientOneRegionPerPage !== null ? (JSON.parse(clientOneRegionPerPage) ? 'Individual Regions' : 'Overworld and Dungeons') : pageMode;
         let expandSidebarInit = clientExpandSidebar !== null ? JSON.parse(clientExpandSidebar) : expandSidebar;
         let darkModeInit = clientDarkMode !== null ? JSON.parse(clientDarkMode) : darkMode;
         let showAgeLogicInit = clientShowAgeLogic !== null ? JSON.parse(clientShowAgeLogic) : showAgeLogic;
@@ -374,7 +375,7 @@ const Tracker = (_props: {}) => {
         setPlayerNumber(playerNumberInit);
         setSettingIcons(settingIconsInit);
         setRegionPage(regionPageInit);
-        setOneRegionPerPage(oneRegionPerPageInit);
+        setPageMode(pageModeInit);
         setExpandSidebar(expandSidebarInit);
         setDarkMode(darkModeInit);
         setShowAgeLogic(showAgeLogicInit);
@@ -417,8 +418,8 @@ const Tracker = (_props: {}) => {
         if (trackerInitialized) localStorage.setItem('RegionPage', JSON.stringify(regionPage));
     }, [regionPage]);
     useEffect(() => {
-        if (trackerInitialized) localStorage.setItem('OneRegionPerPage', JSON.stringify(oneRegionPerPage));
-    }, [oneRegionPerPage]);
+        if (trackerInitialized) localStorage.setItem('PageMode', JSON.stringify(pageMode));
+    }, [pageMode]);
     useEffect(() => {
         if (trackerInitialized) localStorage.setItem('ExpandSidebar', JSON.stringify(expandSidebar));
     }, [expandSidebar]);
@@ -577,12 +578,12 @@ const Tracker = (_props: {}) => {
             if (importSimMode) {
                 console.log('[Simulator] Enabling sim mode');
                 setRegionPage('Warps');
-                setOneRegionPerPage(true);
+                setPageMode('Individual Regions');
                 setLastEntranceName('');
             } else {
                 console.log('[Simulator] Disabling sim mode');
                 setRegionPage('Overworld');
-                setOneRegionPerPage(false);
+                setPageMode('Overworld and Dungeons');
                 setLastEntranceName('');
             }
         }
@@ -623,10 +624,10 @@ const Tracker = (_props: {}) => {
                 delete plando[':checked'];
                 delete plando[':checked_entrances'];
                 setRegionPage('Warps');
-                setOneRegionPerPage(true);
+                setPageMode('Individual Regions');
             } else {
                 setRegionPage('Overworld');
-                setOneRegionPerPage(false);
+                setPageMode('Overworld and Dungeons');
             }
             graph.import(plando);
         } else {
@@ -739,7 +740,7 @@ const Tracker = (_props: {}) => {
         refreshSearch();
         setCurrentGraphPreset(presetName);
         setRegionPage('Overworld');
-        setOneRegionPerPage(false);
+        setPageMode('Overworld and Dungeons');
         setCollapsedRegions({});
         setVisitedSimRegions(new Set());
         setPeekedSimLocations(new Set());
@@ -828,8 +829,8 @@ const Tracker = (_props: {}) => {
                 setRegionPage(setting.target.value as string);
                 setLastEntranceName('');
                 break;
-            case 'one_region_per_page':
-                setOneRegionPerPage(setting.target.value as boolean);
+            case 'page_mode':
+                setPageMode(setting.target.value as string);
                 break;
             case 'expand_sidebar':
                 setExpandSidebar(setting.target.value as boolean);
@@ -1197,7 +1198,7 @@ const Tracker = (_props: {}) => {
         console.log(`${entrance} [Checked]`);
         let sourceEntrance = graph.worlds[playerNumber].get_entrance(entrance);
         graph.check_entrance(sourceEntrance);
-        if (fromWarp || (oneRegionPerPage && !tracker_settings_defs.region_page.options?.includes(regionPage))) {
+        if (fromWarp || (pageMode === 'Individual Regions' && !tracker_settings_defs.region_page.options?.includes(regionPage))) {
             let reverseLink = !!(sourceEntrance.replaces) ? sourceEntrance.replaces : sourceEntrance;
             handleDungeonTravel(reverseLink.target_group, sourceEntrance);
         }
@@ -1438,19 +1439,24 @@ const Tracker = (_props: {}) => {
                 }
             }
             let newPage = '';
-            if (oneRegionPerPage) {
-                if (linkedRegion.name !== regionPage) {
-                    let newRegions = new Set(visitedSimRegions);
-                    newRegions.add(linkedRegion.name);
-                    setVisitedSimRegions(newRegions);
-                    setRegionPage(linkedRegion.name);
-                    newPage = linkedRegion.name;
-                }
-            } else {
-                if (linkedRegion.page !== regionPage) {
-                    setRegionPage(linkedRegion.page);
-                    newPage = linkedRegion.page;
-                }
+            switch (pageMode) {
+                case 'Individual Regions':
+                    if (linkedRegion.name !== regionPage) {
+                        let newRegions = new Set(visitedSimRegions);
+                        newRegions.add(linkedRegion.name);
+                        setVisitedSimRegions(newRegions);
+                        setRegionPage(linkedRegion.name);
+                        newPage = linkedRegion.name;
+                    }
+                    break;
+                case 'Overworld and Dungeons':
+                    if (linkedRegion.page !== regionPage) {
+                        setRegionPage(linkedRegion.page);
+                        newPage = linkedRegion.page;
+                    }
+                    break;
+                case 'Everything on One Page':
+                    break;
             }
             if (!!regionEntrance) {
                 // don't re-scroll if we're linking from within the same region
@@ -1558,17 +1564,23 @@ const Tracker = (_props: {}) => {
         let graphRegions = graph.worlds[playerNumber].region_groups.sort((a, b) =>
             a.alias.localeCompare(b.alias));
         let viewableRegions: GraphRegion[] = [];
-        if (oneRegionPerPage) {
-            if (tracker_settings_defs.region_page.options?.includes(regionPage)) {
+        switch (pageMode) {
+            case 'Individual Regions':
+                if (tracker_settings_defs.region_page.options?.includes(regionPage)) {
+                    viewableRegions = graphRegions.filter(r =>
+                        r.page === regionPage && r.viewable);
+                } else {
+                    viewableRegions = graphRegions.filter(r =>
+                        r.name === regionPage);
+                }
+                break;
+            case 'Overworld and Dungeons':
                 viewableRegions = graphRegions.filter(r =>
                     r.page === regionPage && r.viewable);
-            } else {
-                viewableRegions = graphRegions.filter(r =>
-                    r.name === regionPage);
-            }
-        } else {
-            viewableRegions = graphRegions.filter(r =>
-                r.page === regionPage && r.viewable);
+                break;
+            case 'Everything on One Page':
+                viewableRegions = graphRegions;
+                break;
         }
         let pages: {[page: string]: GraphRegion[]} = {};
         for (let r of graph.worlds[playerNumber].region_groups) {
@@ -1600,7 +1612,7 @@ const Tracker = (_props: {}) => {
             player_number: playerNumber,
             setting_icons: settingIcons,
             region_page: regionPage,
-            one_region_per_page: oneRegionPerPage,
+            page_mode: pageMode,
             expand_sidebar: expandSidebar,
             dark_mode: darkMode,
             show_age_logic: showAgeLogic,
