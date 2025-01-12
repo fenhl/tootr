@@ -250,3 +250,38 @@ body {
     --color-icon-tooltip-shadow2: rgba(0,0,0,0.14);
     --color-icon-tooltip-shadow3: rgba(0,0,0,0.12);
 }
+
+body.stream {
+    background-color: rgb(37, 0, 89) !important;
+    --drawer-width: 1019px;
+}
+
+body.stream .topBar {
+    width: var(--drawer-width);
+}
+
+body.stream .drawerHeader {
+    display: none;
+}
+
+body.stream .gameInfo {
+    margin-top: 64px;
+}
+
+body.stream #worldScrollContainer {
+    height: 100%;
+    scrollbar-width: none;
+    padding-bottom: 20px;
+}
+
+body.stream #warpMenu {
+    display: none;
+}
+
+body.stream .areaTitleText {
+    padding-left: var(--theme-spacing);
+}
+
+body.stream .logicIndicator {
+    display: none;
+}

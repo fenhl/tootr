@@ -356,6 +356,9 @@ const Tracker = (_props: {}) => {
             document.body.classList.add('light');
             document.querySelector("meta[name=theme-color]")?.setAttribute('content', raceModeInit ? lightRaceMode : lightNormalMode);
         }
+        if (streamModeInit) {
+            document.body.classList.add('stream');
+        }
 
         let clientVisitedRegions = localStorage.getItem('SimModeVisitedRegions');
         let visitedRegionsInit = !!clientVisitedRegions ? new Set<string>(JSON.parse(clientVisitedRegions)) : new Set<string>();
@@ -553,6 +556,14 @@ const Tracker = (_props: {}) => {
             document.querySelector("meta[name=theme-color]")?.setAttribute('content', raceMode ? lightRaceMode : lightNormalMode);
         }
     }, [darkMode, raceMode]);
+
+    useEffect(() => {
+        if (streamMode) {
+            document.body.classList.add('stream');
+        } else {
+            document.body.classList.remove('stream');
+        }
+    }, [streamMode]);
 
     useEffect(() => {
         if (graphInitialized && !graphImportFile) {
