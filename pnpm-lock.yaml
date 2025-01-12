@@ -15,8 +15,8 @@ importers:
         specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@fenhl/randomizer-graph-tool':
-        specifier: 2.0.21-4
-        version: 2.0.21-4
+        specifier: 2.0.21-5
+        version: 2.0.21-5
       '@mui/icons-material':
         specifier: ^5.15.20
         version: 5.15.20(@mui/material@5.15.20(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
@@ -446,8 +446,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@fenhl/randomizer-graph-tool@2.0.21-4':
-    resolution: {integrity: sha512-YGo25MRxcje1ljvB06vU5Fzzd29/sU0uqjMa+MzjVaV9hKW5wAyA7/MEhEw9jvrQmM0s8uXcGoYbUTDBq5M3zg==}
+  '@fenhl/randomizer-graph-tool@2.0.21-5':
+    resolution: {integrity: sha512-jsOd0Hi2BaESUu6xxbA2Vi7JfJVTEk3QV9hNtVMhTXh1FJq1Q9t/dLvJBYvusM/X57OhIe4lkhxx3f3/Ga/Riw==}
 
   '@floating-ui/core@1.6.3':
     resolution: {integrity: sha512-1ZpCvYf788/ZXOhRQGFxnYQOVgeU+pi0i+d0Ow34La7qjIXETi6RNswGVKkA6KcDO8/+Ysu2E/CeUmmeEBDvTg==}
@@ -1926,7 +1926,7 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@fenhl/randomizer-graph-tool@2.0.21-4':
+  '@fenhl/randomizer-graph-tool@2.0.21-5':
     dependencies:
       '@babel/generator': 7.26.5
       '@babel/parser': 7.26.5
