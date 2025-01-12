@@ -1600,7 +1600,8 @@ const Tracker = (_props: {}) => {
                     r.page === regionPage && r.viewable);
                 break;
             case 'Everything on One Page':
-                viewableRegions = graphRegions;
+                viewableRegions = graphRegions.filter(r =>
+                    r.viewable);
                 break;
         }
         let pages: {[page: string]: GraphRegion[]} = {};
