@@ -1,12 +1,12 @@
 {
   "name": "tootr",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "localdeploy": "tsc && vite build && ssh m32 \"find /srv/www/tootr/* -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh ./dist/ m32:/srv/www/tootr/ && ssh tootr \"chown -R mracsys:www-data /srv/www/tootr/\"",
+    "localdeploy": "tsc && vite build && ssh m32 \"find /srv/www/tootr/* -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh ./dist/ m32:/srv/www/tootr/ && ssh m32 \"chown -R mracsys:www-data /srv/www/tootr/\"",
     "deploy": "tsc && vite build && ssh tootr \"find /srv/www/tootr/* -not -path '/srv/www/tootr/assets*' -delete\" && rsync -rav -e ssh ./dist/ tootr:/srv/www/tootr/ && ssh tootr \"chown -R mracsys:www-data /srv/www/tootr/\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -15,14 +15,14 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@fenhl/randomizer-graph-tool": "2.0.21-7",
+    "@fenhl/randomizer-graph-tool": "2.1.3-1",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "cross-env": "^7.0.3",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-responsive-masonry": "^2.2.0"
+    "react-responsive-masonry": "2.2.0"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",

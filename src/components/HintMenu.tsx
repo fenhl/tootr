@@ -7,7 +7,7 @@ import ItemMenu from './ItemMenu';
 import ListMenu from "./ListMenu";
 import { location_item_menu_layout } from '@/data/location_item_menu_layout';
 
-import { GraphRegion, GraphEntrancePool, GraphLocation } from '@fenhl/randomizer-graph-tool';
+import { GraphEntrancePool, GraphLocation } from '@fenhl/randomizer-graph-tool';
 
 import '@/styles/HintMenu.css';
 import { location_item_menu_layout_vertical } from "@/data/location_item_menu_layout_vertical";
@@ -20,7 +20,7 @@ interface HintMenuProps {
     handleClose: () => void,
     handleFind: (data: HintMenuData) => void,
     clearHint: () => void,
-    regions: GraphRegion[],
+    hintRegions: string[],
     fullEntrancePool: GraphEntrancePool,
     fullExitPool: GraphEntrancePool,
     locations: GraphLocation[],
@@ -110,7 +110,7 @@ const HintMenu = ({
     handleClose,
     handleFind,
     clearHint,
-    regions,
+    hintRegions,
     fullEntrancePool,
     fullExitPool,
     locations,
@@ -283,10 +283,9 @@ const HintMenu = ({
         setRegionMenuOpen(null);
     }
 
-    const handleFindRegion: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const region = e.currentTarget.getAttribute('data-found-item');
-        if (!!region) {
-            setHintRegion(region);
+    const handleFindRegion: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintRegion(option);
         }
         handleRegionMenuClose();
     }
@@ -299,10 +298,9 @@ const HintMenu = ({
         setPathMenuOpen(null);
     }
 
-    const handleFindPath: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const path = e.currentTarget.getAttribute('data-found-item');
-        if (!!path) {
-            setHintPath(path);
+    const handleFindPath: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintPath(option);
         }
         handlePathMenuClose();
     }
@@ -315,10 +313,9 @@ const HintMenu = ({
         setLocationMenuOpen(null);
     }
 
-    const handleFindLocation: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const location = e.currentTarget.getAttribute('data-found-item');
-        if (!!location) {
-            setHintLocation(location);
+    const handleFindLocation: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintLocation(option);
         }
         handleLocationMenuClose();
     }
@@ -377,10 +374,9 @@ const HintMenu = ({
         setLocation2MenuOpen(null);
     }
 
-    const handleFindLocation2: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const location = e.currentTarget.getAttribute('data-found-item');
-        if (!!location) {
-            setHintLocation2(location);
+    const handleFindLocation2: (option: string) => void = (option) => {
+        if (!!option) {
+            setHintLocation2(option);
         }
         handleLocation2MenuClose();
     }
@@ -409,10 +405,9 @@ const HintMenu = ({
         setNumMenuOpen(null);
     }
 
-    const handleFindNum: MouseEventHandler<HTMLDivElement> = (e): void => {
-        const item = e.currentTarget.getAttribute('data-found-item');
-        if (item !== undefined && item !== null) {
-            setHintMajorItems(parseInt(item));
+    const handleFindNum: (option: string) => void = (option) => {
+        if (!!option || option === '0') {
+            setHintMajorItems(parseInt(option));
         }
         handleNumMenuClose();
     }
@@ -531,7 +526,6 @@ const HintMenu = ({
                 handleClose={handleEntranceMenuClose}
                 handleLink={handleFindEntrance}
                 entrancePool={fullEntrancePool}
-                regions={regions}
                 id="regionMenuEntranceMenu"
             />
             <EntranceMenu
@@ -539,7 +533,6 @@ const HintMenu = ({
                 handleClose={handleExitMenuClose}
                 handleLink={handleFindExit}
                 entrancePool={fullExitPool}
-                regions={regions}
                 id="regionMenuExitMenu"
                 asExits={true}
             />
@@ -563,15 +556,13 @@ const HintMenu = ({
                 handleClose={handleRegionMenuClose}
                 handleFind={handleFindRegion}
                 anchorLocation={regionMenuOpen}
-                sourceLocation={sourceLocation}
-                regions={regions.map(r => r.name)}
+                regions={hintRegions}
                 id="hintMenuRegionList"
             />
             <ListMenu
                 handleClose={handlePathMenuClose}
                 handleFind={handleFindPath}
                 anchorLocation={pathMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={paths}
                 id="hintMenuPathList"
             />
@@ -579,7 +570,6 @@ const HintMenu = ({
                 handleClose={handleLocationMenuClose}
                 handleFind={handleFindLocation}
                 anchorLocation={locationMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={locations.map(l => l.name)}
                 id="hintMenuLocationList"
             />
@@ -587,7 +577,6 @@ const HintMenu = ({
                 handleClose={handleLocation2MenuClose}
                 handleFind={handleFindLocation2}
                 anchorLocation={location2MenuOpen}
-                sourceLocation={sourceLocation}
                 regions={locations.map(l => l.name)}
                 id="hintMenuLocation2List"
             />
@@ -595,7 +584,6 @@ const HintMenu = ({
                 handleClose={handleNumMenuClose}
                 handleFind={handleFindNum}
                 anchorLocation={numMenuOpen}
-                sourceLocation={sourceLocation}
                 regions={Array(100).fill(0).map((_, i) => `${i}`)}
                 id="hintMenuNumList"
             />
