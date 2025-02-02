@@ -69,6 +69,9 @@ export const pathIcons: string[] = [
     'Spirit Medallion',
     'Shadow Medallion',
     'Light Medallion',
+    'Power',
+    'Wisdom',
+    'Courage',
 ]
 
 export const pathLocations: {[pathName: string]: string} = {
@@ -100,6 +103,9 @@ export const pathItems: {[pathName: string]: string} = {
     'Spirit Medallion': 'Spirit Medallion',
     'Shadow Medallion': 'Shadow Medallion',
     'Light Medallion': 'Light Medallion',
+    'Power': 'Triforce of Power',
+    'Wisdom': 'Triforce of Wisdom',
+    'Courage': 'Triforce of Courage',
 }
 
 const HintMenu = ({

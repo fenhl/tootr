@@ -89,7 +89,7 @@ export const RadialMenu = ({
             <input defaultChecked={false} className="radialMenuToggler" type="checkbox" />
             <OotItemIcon onClick={togglePrimary} itemName={buttonItem} />
             <div
-                className={primaryItems.length === 2 ? "dualMenuWrapper" : "radialMenuWrapper"}
+                className={primaryItems.length === 2 ? "dualMenuWrapper" : primaryItems.length <= 4 ? "quadMenuWrapper" : "radialMenuWrapper"}
                 style={{"--item-count": primaryItems.length, "--angle": "calc(360deg / var(--item-count))"} as RadialMenuCSS}
             >
                 <div className="radialMenu">

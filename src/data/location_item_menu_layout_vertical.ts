@@ -196,7 +196,15 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
         },
     ],
     [
-        'Triforce Piece',
+        {
+            button_item: 'Triforce Piece',
+            item_list: [
+                'Triforce Piece',
+                'Triforce of Power',
+                'Triforce of Wisdom',
+                'Triforce of Courage',
+            ]
+        },
         {
             button_item: 'Boss Key',
             item_list: [

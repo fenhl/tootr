@@ -182,7 +182,15 @@ export const location_item_menu_layout: item_menu_layout = [
         'Gold Skulltula Token',
     ],
     [
-        'Triforce Piece',
+        {
+            button_item: 'Triforce Piece',
+            item_list: [
+                'Triforce Piece',
+                'Triforce of Power',
+                'Triforce of Wisdom',
+                'Triforce of Courage',
+            ]
+        },
         {
             button_item: 'Boss Key',
             item_list: [

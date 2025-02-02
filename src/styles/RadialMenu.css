@@ -20,6 +20,11 @@
     z-index: 3;
 }
 
+.quadMenuWrapper {
+    --radial-width: calc(3 * 48 + 16);
+    z-index: 3;
+}
+
 .radialMenuWrapper {
     /*
         Calculate menu diameter by assuming the circumference
@@ -50,6 +55,7 @@
 
 .subRadialMenuWrapper,
 .dualMenuWrapper,
+.quadMenuWrapper,
 .radialMenuWrapper {
     position: absolute;
     top: calc(var(--button-size) / 2 - var(--radial-width) * 1px / 2);
@@ -129,6 +135,7 @@
     right: 50%;
 }
 
+.quadMenuWrapper .segment,
 .subRadialMenuWrapper .segment,
 .radialMenuWrapper .segment {
     bottom: 50%;
@@ -154,6 +161,7 @@
     bottom: 0%;
 }
 
+.quadMenuWrapper .inner,
 .subRadialMenuWrapper .inner,
 .radialMenuWrapper .inner {
     right: -50%;
@@ -173,6 +181,7 @@
 /* Rotate each element to its radial track, keeping each element at the center of the menu */
 .subMenuToggler ~ .radialMenu.subRadialMenu,
 .radialMenuToggler ~ .dualMenuWrapper .radialMenu,
+.radialMenuToggler ~ .quadMenuWrapper .radialMenu,
 .radialMenuToggler ~ .radialMenuWrapper .radialMenu {
     --menu-width: 0px;
     transition: var(--animation-duration);
@@ -181,6 +190,7 @@
 /* When the menu button is clicked, move the elements out along their tracks to the outer menu radius */
 .subMenuToggler:checked ~ .radialMenu.subRadialMenu,
 .radialMenuToggler:checked ~ .dualMenuWrapper .radialMenu,
+.radialMenuToggler:checked ~ .quadMenuWrapper .radialMenu,
 .radialMenuToggler:checked ~ .radialMenuWrapper .radialMenu {
     --menu-width: calc(var(--radial-width) * 1px);
 }
@@ -193,6 +203,10 @@
     height: var(--button-size);
     transform: rotate(calc(-1 * (var(--angle) * var(--index))));
     transition: var(--animation-duration);
+}
+
+.quadMenuWrapper .radialMenuItem .iconTooltipContainer {
+    left: 12%;
 }
 
 .radialMenuItem .iconTooltipContainer .iconSideText {
@@ -223,6 +237,10 @@
 
 .dualMenuWrapper .radialMenuItem .iconTooltipContainer {
     top: calc(var(--menu-width) / 2 - var(--button-size) / 2);
+}
+
+.quadMenuWrapper .radialMenuItem .iconTooltipContainer {
+    top: calc(var(--menu-width) / 2 - (var(--menu-width) / 2 - var(--menu-width) * 0.05) * tan(var(--angle) / 2) + var(--button-size) / 4.5);
 }
 
 .radialMenuItem .iconTooltipContainer .iconDiv:hover {
