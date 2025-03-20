@@ -759,30 +759,41 @@ export const OotItemPanel = ({
     let counter_panel_children = [];
     entryNum = 0;
     for (let gridEntry of itemPanelLayout.win_cons.counters) {
-        let itemName = gridEntry.item_name;
+        let displayItemName = gridEntry.item_name;
+        let internalItemName = displayItemName;
+        if (internalItemName === 'Heart Container') {
+            // heart containers are aliased to 4 heart pieces each
+            internalItemName = 'Piece of Heart';
+        }
         // don't show wincon counters if relevant settings are not on
-        if (itemName === 'Triforce Piece' && !(graphSettings['triforce_hunt'] && graphSettings['triforce_hunt_mode'] !== 'blitz')) continue;
-        if (itemName === 'Heart Container' && !([graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts'))) continue;
+        if (displayItemName === 'Triforce Piece' && !(graphSettings['triforce_hunt'] && graphSettings['triforce_hunt_mode'] !== 'blitz')) continue;
+        if (displayItemName === 'Heart Container' && !([graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts'))) continue;
         // triforce piece count moved to dungeon reward area for space if all three counters should be shown
-        if (itemName === 'Triforce Piece' && graphSettings['triforce_hunt'] && [graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts')) continue;
+        if (displayItemName === 'Triforce Piece' && graphSettings['triforce_hunt'] && [graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts')) continue;
         let collected: number;
-        if (Object.keys(graphPlayerInventory).includes(gridEntry.item_name)) {
-            collected = graphPlayerInventory[gridEntry.item_name];
+        if (Object.keys(graphPlayerInventory).includes(internalItemName)) {
+            collected = graphPlayerInventory[internalItemName];
         } else {
             collected = 0;
         }
         let available: number;
-        if (Object.keys(graphCollectedItems).includes(gridEntry.item_name)) {
-            available = graphCollectedItems[gridEntry.item_name];
+        if (Object.keys(graphCollectedItems).includes(internalItemName)) {
+            available = graphCollectedItems[internalItemName];
         } else {
             available = 0;
         }
         let show_available_tokens = Object.keys(graphSettings).includes('tokensanity') && graphSettings['tokensanity'] === 'off'
-            && Array.isArray(graphSettings.graphplugin_viewable_unshuffled_items) && !graphSettings.graphplugin_viewable_unshuffled_items.includes('Gold Skulltula Tokens') && itemName === 'Gold Skulltula Token';
+            && Array.isArray(graphSettings.graphplugin_viewable_unshuffled_items) && !graphSettings.graphplugin_viewable_unshuffled_items.includes('Gold Skulltula Tokens') && displayItemName === 'Gold Skulltula Token';
         // Display hearts with the 3 minimum starting hearts. The randomizer logic internally assumes these are always there and starts at 0
-        if (itemName === 'Heart Container') collected += 3;
-        let addItem = () => addStartingItem(gridEntry.item_name);
-        let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(gridEntry.item_name), {});
+        if (displayItemName === 'Heart Container') collected += 12;
+        let counter_display = `${collected}`;
+        if (show_available_tokens) {
+            counter_display = `${collected}/${available}`;
+        } else if (displayItemName === 'Heart Container') {
+            counter_display = `${Math.floor(collected / 4)} + ${collected % 4}/4`;
+        }
+        let addItem = () => addStartingItem(internalItemName);
+        let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(internalItemName), {});
         counter_panel_children.push(
         <div
             className='ootCounterItem'
@@ -792,14 +803,14 @@ export const OotItemPanel = ({
             onTouchCancel={contextMenuHandler.onTouchCancel}
             onTouchEnd={contextMenuHandler.onTouchEnd}
             onTouchMove={contextMenuHandler.onTouchMove}
-            key={`${itemName}counterPanelEntry${entryNum}`}
+            key={`${displayItemName}counterPanelEntry${entryNum}`}
         >
             <OotItemIcon
-                itemName={itemName}
+                itemName={displayItemName}
                 fade={collected ? false : true}
-                key={`${itemName}counterPanelEntryIcon${entryNum}`}
+                key={`${displayItemName}counterPanelEntryIcon${entryNum}`}
             />
-            <div className='ootCounterLabel' key={`${itemName}counterPanelEntryLabel${entryNum}`}>{collected}{show_available_tokens ? `/${available}` : null}</div>
+            <div className='ootCounterLabel' key={`${displayItemName}counterPanelEntryLabel${entryNum}`}>{counter_display}</div>
         </div>);
         entryNum++;
     }
