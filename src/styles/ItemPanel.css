@@ -445,12 +445,46 @@
     filter: none;
     width: 40px;
 }
+.ootTfbWinCons {
+    width: 144px;
+    height: 48px;
+    position: relative;
+}
+.ootTfbWinCons .iconTooltipContainer,
+.ootTfbWinCons .iconTooltipContainer .iconDiv {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.ootTfbWinCons .iconTooltipContainer:has(.left) {
+    position: absolute;
+    top: 0px;
+    left: 8px;
+}
+.ootTfbWinCons .iconTooltipContainer:has(.middle) {
+    position: absolute;
+    top: 0px;
+    left: 48px;
+}
+.ootTfbWinCons .iconTooltipContainer:has(.right) {
+    position: absolute;
+    top: 0px;
+    left: 88px;
+}
+.ootTfbWinCons .iconCenterText {
+    opacity: 100%;
+    filter: none;
+    width: 40px;
+}
 .ootCounterWinCons {
     width: 144px;
     height: 96px;
     display: flex;
     align-items: center;
     position: relative;
+}
+.ootCounterWinCons.hasTfbWinCons {
+    height: 48px;
 }
 .ootCounterWinCons .iconContainer {
     filter: none;

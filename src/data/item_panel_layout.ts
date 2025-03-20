@@ -44,6 +44,11 @@ interface winconEntry {
         middle: itemEntry,
         right: itemEntry,
     },
+    tfb: {
+        left: itemEntry,
+        middle: itemEntry,
+        right: itemEntry,
+    },
     counters: itemEntry[],
 }
 
@@ -319,6 +324,11 @@ export const itemPanelLayout: panelLayout = {
             left: { item_name: "Kokiri Emerald" },
             middle: { item_name: "Goron Ruby" },
             right: { item_name: "Zora Sapphire" },
+        },
+        tfb: {
+            left: { item_name: "Triforce of Power" },
+            middle: { item_name: "Triforce of Wisdom" },
+            right: { item_name: "Triforce of Courage" },
         },
         counters: [
             { item_name: "Triforce Piece" },

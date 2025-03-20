@@ -725,12 +725,43 @@ export const OotItemPanel = ({
         }
     }
 
+    let tfb_panel_visible = false;
+    let tfb_panel_children = [];
+    entryNum = 0;
+    for (let [pos, gridEntry] of Object.entries(itemPanelLayout.win_cons.tfb)) {
+        let itemName = gridEntry.item_name;
+        if (!(graphSettings['triforce_hunt'] && graphSettings['triforce_hunt_mode'] === 'blitz')) continue;
+        // triforce piece count moved to dungeon reward area for space if all three counters should be shown
+        if (graphSettings['triforce_hunt'] && [graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts')) continue;
+        let collected: number;
+        if (Object.keys(graphPlayerInventory).includes(gridEntry.item_name)) {
+            collected = graphPlayerInventory[gridEntry.item_name];
+        } else {
+            collected = 0;
+        }
+        let addItem = () => addStartingItem(gridEntry.item_name);
+        let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(gridEntry.item_name), {});
+        tfb_panel_children.push(<OotItemIcon
+            itemName={itemName}
+            className={pos}
+            onClick={addItem}
+            handleContextMenu={contextMenuHandler}
+            //TODO centerLabel with path count
+            fade={collected ? false : true}
+            fadeLabels={false}
+            hideLabels={false}
+            key={`${itemName}tfbPanelEntry${entryNum}`}
+        />);
+        entryNum++;
+        tfb_panel_visible = true;
+    }
+
     let counter_panel_children = [];
     entryNum = 0;
     for (let gridEntry of itemPanelLayout.win_cons.counters) {
         let itemName = gridEntry.item_name;
         // don't show wincon counters if relevant settings are not on
-        if (itemName === 'Triforce Piece' && !(graphSettings['triforce_hunt'])) continue;
+        if (itemName === 'Triforce Piece' && !(graphSettings['triforce_hunt'] && graphSettings['triforce_hunt_mode'] !== 'blitz')) continue;
         if (itemName === 'Heart Container' && !([graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts'))) continue;
         // triforce piece count moved to dungeon reward area for space if all three counters should be shown
         if (itemName === 'Triforce Piece' && graphSettings['triforce_hunt'] && [graphSettings['shuffle_ganon_bosskey'], graphSettings['bridge']].includes('hearts')) continue;
@@ -802,7 +833,12 @@ export const OotItemPanel = ({
                     <div className='ootRewardWinCons'>
                         {wincon_panel_children}
                     </div>
-                    <div className='ootCounterWinCons'>
+                    { tfb_panel_visible ?
+                    <div className='ootTfbWinCons'>
+                        {tfb_panel_children}
+                    </div> : null
+                    }
+                    <div className={tfb_panel_visible ? 'ootCounterWinCons hasTfbWinCons' : 'ootCounterWinCons'}>
                         <div className='ootCounterItems'>
                             {counter_panel_children}
                         </div>
