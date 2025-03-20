@@ -207,8 +207,8 @@ export const location_item_menu_layout_vertical: item_menu_layout = [
             item_list: [
                 'Triforce Piece',
                 'Triforce of Power',
-                'Triforce of Wisdom',
                 'Triforce of Courage',
+                'Triforce of Wisdom',
             ]
         },
         {
