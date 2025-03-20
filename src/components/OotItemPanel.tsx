@@ -739,7 +739,7 @@ export const OotItemPanel = ({
         } else {
             collected = 0;
         }
-        let addItem = () => addStartingItem(gridEntry.item_name);
+        let addItem = (!collected) ? () => addStartingItem(gridEntry.item_name) : () => {};
         let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(gridEntry.item_name), {});
         tfb_panel_children.push(<OotItemIcon
             itemName={itemName}
