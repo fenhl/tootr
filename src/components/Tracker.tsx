@@ -1286,6 +1286,21 @@ const Tracker = (_props: {}) => {
                     refreshSearch();
                 }
                 break;
+            case 'goal-count':
+                if (ootHint.hintPath && ootHint.hintMajorItems !== undefined) {
+                    let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
+                    let tempGoal = new GraphHintGoal();
+                    tempGoal.item_count = 1;
+                    if (Object.keys(pathItems).includes(ootHint.hintPath)) {
+                        tempGoal.item = graph.worlds[playerNumber].get_item(pathItems[ootHint.hintPath]);
+                    }
+                    if (Object.keys(pathLocations).includes(ootHint.hintPath)) {
+                        tempGoal.location = graph.worlds[playerNumber].get_location(pathLocations[ootHint.hintPath]);
+                    }
+                    graph.hint_path_count(hintLocation, tempGoal, ootHint.hintMajorItems);
+                    refreshSearch;
+                }
+                break;
             case 'location':
                 if (ootHint.hintLocation && ootHint.hintItem) {
                     let hintLocation = graph.worlds[playerNumber].get_location(locationToLink);
@@ -1605,6 +1620,7 @@ const Tracker = (_props: {}) => {
         let graphLocationCount = graphLocations.filter(l => l.shuffled && !l.is_hint && !l.is_restricted);
         let graphHintRegions = graph.get_hint_regions().sort();
         let graphRewardHints = graph.worlds[playerNumber].fixed_item_area_hints;
+        let graphPathCounts = graph.worlds[playerNumber].path_counts;
         let sourceHintLocationType = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).type : 'HintStone';
         let sourceHintLocationText = locationToLink !== '' ? graph.worlds[playerNumber].get_location(locationToLink).hint_text : '';
         sourceHintLocationText = sourceHintLocationText.replaceAll('#', '').replaceAll('^', '\n');
@@ -1672,6 +1688,7 @@ const Tracker = (_props: {}) => {
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
                             graphRegions={graphRegions}
+                            graphPathCounts={graphPathCounts}
                             cycleGraphSetting={cycleGraphSetting}
                             handleMultiselectMenuOpen={handleMultiselectMenuOpen}
                             graphSettingsOptions={graphSettingsOptions}

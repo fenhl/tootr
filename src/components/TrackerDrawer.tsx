@@ -39,6 +39,7 @@ interface TrackerDrawerProps {
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
     graphRegions: GraphRegion[],
+    graphPathCounts: {[item_name: string]: number},
     cycleGraphSetting: ({graphSetting, reverseDirection}: {graphSetting?: string, reverseDirection?: boolean}) => void,
     handleMultiselectMenuOpen: (s: Element, n: string) => void,
     graphSettingsOptions: GraphSettingsOptions,
@@ -76,6 +77,7 @@ const TrackerDrawer = ({
     graphLocations,
     graphEntrances,
     graphRegions,
+    graphPathCounts,
     cycleGraphSetting,
     handleMultiselectMenuOpen,
     graphSettingsOptions,
@@ -228,6 +230,7 @@ const TrackerDrawer = ({
                             graphRewardHints={graphRewardHints}
                             graphLocations={graphLocations}
                             graphEntrances={graphEntrances}
+                            graphPathCounts={graphPathCounts}
                             visitedSimRegions={visitedSimRegions}
                             isNotMobile={isNotMobile}
                         />
@@ -256,6 +259,7 @@ const TrackerDrawer = ({
                                 graphRewardHints={graphRewardHints}
                                 graphLocations={graphLocations}
                                 graphEntrances={graphEntrances}
+                                graphPathCounts={graphPathCounts}
                                 visitedSimRegions={visitedSimRegions}
                                 isNotMobile={isNotMobile}
                             />

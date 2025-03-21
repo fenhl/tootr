@@ -251,6 +251,16 @@ const HintMenu = ({
                         handleFind(data);
                     }
                     break;
+                case 8:
+                    if (hintPath && hintMajorItems !== null) {
+                        let data: HintMenuData = {
+                            hintType: 'goal-count',
+                            hintPath: hintPath,
+                            hintMajorItems: hintMajorItems,
+                        }
+                        handleFind(data);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -445,6 +455,7 @@ const HintMenu = ({
                             <Tab {...allyProps(5, 'hintMenuDrawerTab')} label='Entrance' />
                             <Tab {...allyProps(6, 'hintMenuDrawerTab')} label='Item' />
                             <Tab {...allyProps(7, 'hintMenuDrawerTab')} label='# Items' />
+                            <Tab {...allyProps(8, 'hintMenuDrawerTab')} label='# Path' />
                         </Tabs>
                         <TabPanel value={tabValue} index={0} className='hintMenuDrawerTab'>
                             <div className="hintRegionMenu" onClick={(e) => handleRegionMenuOpen(e)}>
@@ -512,6 +523,14 @@ const HintMenu = ({
                             </div>
                             <div className="hintNumMenu" onClick={(e) => handleNumMenuOpen(e)}>
                                 <span>{hintMajorItems !== null ? hintMajorItems : '# Major Items'}</span><ArrowDropDownIcon />
+                            </div>
+                        </TabPanel>
+                        <TabPanel value={tabValue} index={8} className='hintMenuDrawerTab'>
+                            <div className="hintPathMenu" onClick={(e) => handlePathMenuOpen(e)}>
+                                <span>{hintPath ? hintPath : 'Hinted Path'}</span><ArrowDropDownIcon />
+                            </div>
+                            <div className="hintNumMenu" onClick={(e) => handleNumMenuOpen(e)}>
+                                <span>{hintMajorItems !== null ? hintMajorItems : '# Steps'}</span><ArrowDropDownIcon />
                             </div>
                         </TabPanel>
                     </div>

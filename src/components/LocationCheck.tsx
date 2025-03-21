@@ -187,6 +187,24 @@ const LocationCheck = ({
                                     <span className='locationHintEqualSign'>=</span>
                                     <span className='locationHintRegion'>{location.hint.area?.num_major_items} Major Items</span>
                                     </React.Fragment>
+                                : location.hint.type === 'goal-count' && !!location.hint.goal?.item ?
+                                    <React.Fragment>
+                                    <span className='locationHintRegion'>{location.world?.path_counts[location.hint.goal.item.name]} Steps</span>
+                                    <ArrowForwardIcon className='locationHintArrow' />
+                                    {
+                                        !!location.hint.goal.item ?
+                                            <OotItemIcon
+                                                itemName={location.hint.goal.item.name}
+                                                className="locationKnownItem"
+                                            />
+                                        : !!location.hint.goal.location ?
+                                            <OotItemIcon
+                                                itemName={location.hint.goal.location.name}
+                                                className="locationKnownItem"
+                                            />
+                                        : null
+                                    }
+                                    </React.Fragment>
                                 : null
                             }
 

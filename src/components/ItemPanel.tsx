@@ -27,6 +27,7 @@ interface ItemPanelProps {
     }},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
+    graphPathCounts: {[item_name: string]: number},
     visitedSimRegions: Set<string>,
     isNotMobile: boolean,
 }
@@ -45,6 +46,7 @@ export const ItemPanel = ({
     graphRewardHints,
     graphLocations,
     graphEntrances,
+    graphPathCounts,
     visitedSimRegions,
     isNotMobile,
 }: ItemPanelProps) => {
@@ -64,6 +66,7 @@ export const ItemPanel = ({
                 graphRewardHints={graphRewardHints}
                 graphLocations={graphLocations}
                 graphEntrances={graphEntrances}
+                graphPathCounts={graphPathCounts}
                 visitedSimRegions={visitedSimRegions}
                 isNotMobile={isNotMobile}
             />

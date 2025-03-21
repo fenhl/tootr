@@ -28,6 +28,7 @@ interface OotItemPanelProps {
     }},
     graphLocations: GraphLocation[],
     graphEntrances: GraphEntrance[],
+    graphPathCounts: {[item_name: string]: number},
     visitedSimRegions: Set<string>,
     isNotMobile: boolean,
 }
@@ -72,6 +73,7 @@ export const OotItemPanel = ({
     graphRewardHints,
     graphLocations,
     graphEntrances,
+    graphPathCounts,
     visitedSimRegions,
     isNotMobile,
 }: OotItemPanelProps) => {
@@ -741,12 +743,16 @@ export const OotItemPanel = ({
         }
         let addItem = (!collected) ? () => addStartingItem(gridEntry.item_name) : () => {};
         let contextMenuHandler = new ContextMenuHandlerWithArgs(() => removeStartingItem(gridEntry.item_name), {});
+        let subscript = '?';
+        if (Object.keys(graphPathCounts).includes(gridEntry.item_name)) {
+            subscript = `${graphPathCounts[gridEntry.item_name]}`;
+        }
         tfb_panel_children.push(<OotItemIcon
             itemName={itemName}
             className={pos}
             onClick={addItem}
             handleContextMenu={contextMenuHandler}
-            //TODO centerLabel with path count
+            centerLabel={subscript}
             fade={collected ? false : true}
             fadeLabels={false}
             hideLabels={false}
